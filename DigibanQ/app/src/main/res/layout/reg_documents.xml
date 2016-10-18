@@ -65,45 +65,89 @@
             android:textStyle="bold"
             android:text="SUPPORTING DOCUMENTS"
             android:textColor="@color/colorPrimary"/>
-
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/windowBackground"
-            android:layout_margin="10dp"
-            android:inputType="text"
-            android:hint="Bank Statement 1"
-            android:textColorHint="#757584"
-            android:drawableLeft="@drawable/upload_doc_icon"
-            android:textColor="#757584"
-            android:id="@+id/docOne"
-            android:textSize="14dp" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/windowBackground"
-            android:layout_margin="10dp"
-            android:inputType="text"
-            android:hint="Bank Statement 2"
-            android:textColorHint="#757584"
-            android:drawableLeft="@drawable/upload_doc_icon"
-            android:textColor="#757584"
-            android:id="@+id/docTwo"
-            android:textSize="14dp" />
+            <Button
+                android:id="@+id/upload_bs_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:textColor="@color/timestamp"
+                android:text="Upload"/>
 
-        <EditText
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/windowBackground"
+                android:layout_margin="10dp"
+                android:inputType="text"
+                android:hint="Bank Statement 1"
+                android:textColorHint="#757584"
+                android:textColor="#757584"
+                android:id="@+id/docOne"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/windowBackground"
-            android:layout_margin="10dp"
-            android:inputType="text"
-            android:hint="Pay Slip 1"
-            android:textColorHint="#757584"
-            android:drawableLeft="@drawable/upload_doc_icon"
-            android:textColor="#757584"
-            android:id="@+id/paySlipOne"
-            android:textSize="14dp" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/upload_bs_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:textColor="@color/timestamp"
+                android:text="Upload"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/windowBackground"
+                android:layout_margin="10dp"
+                android:inputType="text"
+                android:hint="Bank Statement 2"
+                android:textColorHint="#757584"
+                android:drawableLeft="@drawable/upload_doc_icon"
+                android:textColor="#757584"
+                android:id="@+id/docTwo"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/upload_ps_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:textColor="@color/timestamp"
+                android:text="Upload"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/windowBackground"
+                android:layout_margin="10dp"
+                android:inputType="text"
+                android:hint="Pay Slip 1"
+                android:textColorHint="#757584"
+                android:drawableLeft="@drawable/upload_doc_icon"
+                android:textColor="#757584"
+                android:id="@+id/paySlipOne"
+                android:textSize="14dp" />
+
+        </LinearLayout>
 
         <EditText
             android:layout_width="match_parent"

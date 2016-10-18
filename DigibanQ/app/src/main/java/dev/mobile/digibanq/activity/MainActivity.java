@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 // Perform action on click
-                Intent reg = new Intent(MainActivity.this, LeanActivity.class);
+                Intent reg = new Intent(MainActivity.this, Register.class);
                 MainActivity.this.startActivity(reg);
             }
 
