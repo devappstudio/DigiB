@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">digiBanQ</string>
+    <string name="title_activity_welcome">digiBanQ</string>
+    <string name="element_text">Element</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="logo_title">digiBanQ</string>
+    <string name="slide_1_title">Digi Loans</string>
+    <string name="slide_1_desc">Get a pay day loan in less than 2hrs? We make it happen.</string>
+
+    <string name="slide_2_title">Transactions</string>
+    <string name="slide_2_desc">Perform all your mobile money and bank transactions with no difficulties here.</string>
+
+    <string name="slide_3_title">Cards Available</string>
+    <string name="slide_3_desc">Get a recharge card fast and easy with DigibanQ</string>
+
+    <string name="slide_4_title">Great Discounts</string>
+    <string name="slide_4_desc">Buy your favourite products,have them delivered with in 2 hours and pay later</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="logo">DigibanQ</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="sign_in">LOGIN</string>
+    <string name="help">Need help?</string>
+    <string name="reg_link">Create an account here.</string>
+    <string name="reg">SIGN UP</string>
+    <string name="action_search">Search</string>
+    <string name="action_view_module">View Layout</string>
+    <string name="action_settings">Settings</string>
+    <string name="ten">10</string>
+    <string name="three">three</string>
+    <string name="eight">eight</string>
+    <string name="five">five</string>
+    <string name="four">four</string>
+    <string name="nine">nine</string>
+    <string name="one">one</string>
+    <string name="seven">seven</string>
+    <string name="six">six</string>
+    <string name="two">two</string>
+    <string name="alerts">Alerts</string>
+    <string name="money">Money</string>
+    <string name="store">Store</string>
+    <string name="inbox">Inbox</string>
+    <string name="orders">Orders</string>
+    <string name="highlights">Highlights</string>
+    <string name="goal">Goal</string>
+    <string name="programs">programs</string>
+    <string name="store_front">Store Front</string>
+    <string name="budget">Budget</string>
+
+    <string-array name="country_array">
+        <item>Ghana</item>
+        <item>Nigeria</item>
+        <item>Kenya</item>
+        <item>South Africa</item>
+        <item>U.S</item>
+        <item>U.K</item>
+    </string-array>
+</resources>
