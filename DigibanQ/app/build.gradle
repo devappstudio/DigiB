@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.neenbedankt.android-apt'
+def dbflow_version = "4.0.0-beta1"
+def sqlcipher_version = "3.3.1"
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
@@ -33,4 +35,18 @@ dependencies {
     compile 'com.github.clans:fab:1.6.4'
     compile 'org.lucasr.twowayview:twowayview:0.1.4'
     compile 'com.miguelcatalan:materialsearchview:1.4.0'
+
+    apt "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
+    // use kapt for kotlin apt
+    compile "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
+    compile "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
+
+    // sql-cipher database encryption (optional)
+    compile "com.github.Raizlabs.DBFlow:dbflow-sqlcipher:${dbflow_version}"
+
+    compile "net.zetetic:android-database-sqlcipher:${sqlcipher_version}@aar"
+
+    // kotlin extensions
+    compile "com.github.Raizlabs.DBFlow:dbflow-kotlinextensions:${dbflow_version}"
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
 }
