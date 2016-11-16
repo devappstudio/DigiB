@@ -51,6 +51,21 @@
     <string name="programs">programs</string>
     <string name="store_front">Store Front</string>
     <string name="budget">Budget</string>
+    <string name="cmd_text">Well done, lets start by adding new goal or select from our listed options</string>
+    <string name="product_hint">Enter Products for the Store</string>
+    <string name="department_store">My Department Store &#8230;</string>
+
+    <string-array name="dept_array">
+        <item>Apparel</item>
+        <item>Beauty</item>
+        <item>Electronics</item>
+        <item>Grocery</item>
+        <item>Home Improvement</item>
+        <item>Jewelry</item>
+        <item>Pharmacy</item>
+    </string-array>
+
+    <color name="snow">#eee9e9</color>
 
     <string-array name="country_array">
         <item>Ghana</item>

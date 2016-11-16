@@ -50,11 +50,6 @@
             android:icon="@drawable/ic_menu_feeds"
             android:title="Feeds" />
         <item
-            android:id="@+id/navigation_item_5"
-            app:actionViewClass="android.widget.TextView"
-            android:icon="@drawable/ic_menu_wishlist"
-            android:title="Wishlist" />
-        <item
             android:id="@+id/navigation_item_6"
             android:icon="@drawable/ic_menu_programs"
             android:title="Programs" />
@@ -94,6 +89,7 @@
                     android:title="Goal Specific Coupons" />
                 <item
                     android:id="@+id/notes"
+                    app:actionViewClass="android.widget.TextView"
                     android:icon="@drawable/ic_menu_notes"
                     android:title="Wishlist" />
             </menu>

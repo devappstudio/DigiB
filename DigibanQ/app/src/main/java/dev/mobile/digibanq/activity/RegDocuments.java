@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -50,13 +51,15 @@ public class RegDocuments extends AppCompatActivity{
                             {
                                 // The code in this function will be executed when the dialog OK button is pushed
                                 m_chosen = chosenDir;
-                                Toast.makeText(RegDocuments.this, "Chosen FileOpenDialog File: " +
-                                        m_chosen, Toast.LENGTH_LONG).show();
+                                EditText fileName = (EditText)findViewById(R.id.docOne);
+                                fileName.setText(m_chosen);
+                                //Toast.makeText(RegDocuments.this, "Chosen FileOpenDialog File: " +
+                                //m_chosen, Toast.LENGTH_LONG).show();
                             }
                         });
 
                 //You can change the default filename using the public variable "Default_File_Name"
-                FileOpenDialog.Default_File_Name = "";
+                FileOpenDialog.Default_File_Name = "my_default.txt";
                 FileOpenDialog.chooseFile_or_Dir();
 
                 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -74,7 +77,7 @@ public class RegDocuments extends AppCompatActivity{
                 /////////////////////////////////////////////////////////////////////////////////////////////////
                 //Create FileSaveDialog and register a callback
                 /////////////////////////////////////////////////////////////////////////////////////////////////
-                SimpleFileDialog FileSaveDialog =  new SimpleFileDialog(RegDocuments.this, "FileSave",
+                SimpleFileDialog FileOpenDialog =  new SimpleFileDialog(RegDocuments.this, "FileOpen",
                         new SimpleFileDialog.SimpleFileDialogListener()
                         {
                             @Override
@@ -82,14 +85,16 @@ public class RegDocuments extends AppCompatActivity{
                             {
                                 // The code in this function will be executed when the dialog OK button is pushed
                                 m_chosen = chosenDir;
-                                Toast.makeText(RegDocuments.this, "Chosen FileOpenDialog File: " +
-                                        m_chosen, Toast.LENGTH_LONG).show();
+                                EditText fileName = (EditText)findViewById(R.id.docTwo);
+                                fileName.setText(m_chosen);
+                                //Toast.makeText(RegDocuments.this, "Chosen FileOpenDialog File: " +
+                                //m_chosen, Toast.LENGTH_LONG).show();
                             }
                         });
 
                 //You can change the default filename using the public variable "Default_File_Name"
-                FileSaveDialog.Default_File_Name = "my_default.txt";
-                FileSaveDialog.chooseFile_or_Dir();
+                FileOpenDialog.Default_File_Name = "my_default.txt";
+                FileOpenDialog.chooseFile_or_Dir();
 
                 /////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -107,7 +112,7 @@ public class RegDocuments extends AppCompatActivity{
                 /////////////////////////////////////////////////////////////////////////////////////////////////
                 //Create FileOpenDialog and register a callback
                 /////////////////////////////////////////////////////////////////////////////////////////////////
-                SimpleFileDialog FolderChooseDialog =  new SimpleFileDialog(RegDocuments.this, "FolderChoose",
+                SimpleFileDialog FileOpenDialog =  new SimpleFileDialog(RegDocuments.this, "FileOpen",
                         new SimpleFileDialog.SimpleFileDialogListener()
                         {
                             @Override
@@ -115,12 +120,151 @@ public class RegDocuments extends AppCompatActivity{
                             {
                                 // The code in this function will be executed when the dialog OK button is pushed
                                 m_chosen = chosenDir;
-                                Toast.makeText(RegDocuments.this, "Chosen FileOpenDialog File: " +
-                                        m_chosen, Toast.LENGTH_LONG).show();
+                                EditText fileName = (EditText)findViewById(R.id.paySlipOne);
+                                fileName.setText(m_chosen);
+                                //Toast.makeText(RegDocuments.this, "Chosen FileOpenDialog File: " +
+                                //m_chosen, Toast.LENGTH_LONG).show();
                             }
                         });
 
-                FolderChooseDialog.chooseFile_or_Dir();
+                FileOpenDialog.Default_File_Name = "my_default.txt";
+                FileOpenDialog.chooseFile_or_Dir();
+
+                /////////////////////////////////////////////////////////////////////////////////////////////////
+
+            }
+        });
+
+        //Button4
+        Button dirChooserButton4 = (Button) findViewById(R.id.upload_ps_two);
+        dirChooserButton4.setOnClickListener(new View.OnClickListener()
+        {
+            String m_chosen;
+            @Override
+            public void onClick(View v) {
+
+                /////////////////////////////////////////////////////////////////////////////////////////////////
+                //Create FileOpenDialog and register a callback
+                /////////////////////////////////////////////////////////////////////////////////////////////////
+                SimpleFileDialog FileOpenDialog =  new SimpleFileDialog(RegDocuments.this, "FileOpen",
+                        new SimpleFileDialog.SimpleFileDialogListener()
+                        {
+                            @Override
+                            public void onChosenDir(String chosenDir)
+                            {
+                                // The code in this function will be executed when the dialog OK button is pushed
+                                m_chosen = chosenDir;
+                                EditText fileName = (EditText)findViewById(R.id.paySlipTwo);
+                                fileName.setText(m_chosen);
+                                //Toast.makeText(RegDocuments.this, "Chosen FileOpenDialog File: " +
+                                        //m_chosen, Toast.LENGTH_LONG).show();
+                            }
+                        });
+
+                FileOpenDialog.Default_File_Name = "my_default.txt";
+                FileOpenDialog.chooseFile_or_Dir();
+
+                /////////////////////////////////////////////////////////////////////////////////////////////////
+
+            }
+        });
+
+        //Button5
+        Button dirChooserButton5 = (Button) findViewById(R.id.upload_ps_three);
+        dirChooserButton5.setOnClickListener(new View.OnClickListener()
+        {
+            String m_chosen;
+            @Override
+            public void onClick(View v) {
+
+                /////////////////////////////////////////////////////////////////////////////////////////////////
+                //Create FileOpenDialog and register a callback
+                /////////////////////////////////////////////////////////////////////////////////////////////////
+                SimpleFileDialog FileOpenDialog =  new SimpleFileDialog(RegDocuments.this, "FileOpen",
+                        new SimpleFileDialog.SimpleFileDialogListener()
+                        {
+                            @Override
+                            public void onChosenDir(String chosenDir)
+                            {
+                                // The code in this function will be executed when the dialog OK button is pushed
+                                m_chosen = chosenDir;
+                                EditText fileName = (EditText)findViewById(R.id.paySlipThree);
+                                fileName.setText(m_chosen);
+                                //Toast.makeText(RegDocuments.this, "Chosen FileOpenDialog File: " +
+                                //m_chosen, Toast.LENGTH_LONG).show();
+                            }
+                        });
+
+                FileOpenDialog.Default_File_Name = "my_default.txt";
+                FileOpenDialog.chooseFile_or_Dir();
+
+                /////////////////////////////////////////////////////////////////////////////////////////////////
+
+            }
+        });
+
+        //Button4
+        Button dirChooserButton6 = (Button) findViewById(R.id.upload_idCard);
+        dirChooserButton6.setOnClickListener(new View.OnClickListener()
+        {
+            String m_chosen;
+            @Override
+            public void onClick(View v) {
+
+                /////////////////////////////////////////////////////////////////////////////////////////////////
+                //Create FileOpenDialog and register a callback
+                /////////////////////////////////////////////////////////////////////////////////////////////////
+                SimpleFileDialog FileOpenDialog =  new SimpleFileDialog(RegDocuments.this, "FileOpen",
+                        new SimpleFileDialog.SimpleFileDialogListener()
+                        {
+                            @Override
+                            public void onChosenDir(String chosenDir)
+                            {
+                                // The code in this function will be executed when the dialog OK button is pushed
+                                m_chosen = chosenDir;
+                                EditText fileName = (EditText)findViewById(R.id.idCard);
+                                fileName.setText(m_chosen);
+                                //Toast.makeText(RegDocuments.this, "Chosen FileOpenDialog File: " +
+                                //m_chosen, Toast.LENGTH_LONG).show();
+                            }
+                        });
+
+                FileOpenDialog.Default_File_Name = "my_default.txt";
+                FileOpenDialog.chooseFile_or_Dir();
+
+                /////////////////////////////////////////////////////////////////////////////////////////////////
+
+            }
+        });
+
+        //Button4
+        Button dirChooserButton7 = (Button) findViewById(R.id.upload_empCard);
+        dirChooserButton7.setOnClickListener(new View.OnClickListener()
+        {
+            String m_chosen;
+            @Override
+            public void onClick(View v) {
+
+                /////////////////////////////////////////////////////////////////////////////////////////////////
+                //Create FileOpenDialog and register a callback
+                /////////////////////////////////////////////////////////////////////////////////////////////////
+                SimpleFileDialog FileOpenDialog =  new SimpleFileDialog(RegDocuments.this, "FileOpen",
+                        new SimpleFileDialog.SimpleFileDialogListener()
+                        {
+                            @Override
+                            public void onChosenDir(String chosenDir)
+                            {
+                                // The code in this function will be executed when the dialog OK button is pushed
+                                m_chosen = chosenDir;
+                                EditText fileName = (EditText)findViewById(R.id.empCard);
+                                fileName.setText(m_chosen);
+                                //Toast.makeText(RegDocuments.this, "Chosen FileOpenDialog File: " +
+                                //m_chosen, Toast.LENGTH_LONG).show();
+                            }
+                        });
+
+                FileOpenDialog.Default_File_Name = "my_default.txt";
+                FileOpenDialog.chooseFile_or_Dir();
 
                 /////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -129,7 +273,8 @@ public class RegDocuments extends AppCompatActivity{
 
 
 
-    upload_profile = (ImageView)findViewById(R.id.upload_profile);
+
+        upload_profile = (ImageView)findViewById(R.id.upload_profile);
         back = (Button)findViewById(R.id.btn_back);
         next = (Button)findViewById(R.id.btn_cont);
 

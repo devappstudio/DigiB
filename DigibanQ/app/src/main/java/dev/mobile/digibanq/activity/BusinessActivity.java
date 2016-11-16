@@ -141,7 +141,7 @@ public class BusinessActivity extends AppCompatActivity
         feeds=(TextView) MenuItemCompat.getActionView(navigationView.getMenu().
                 findItem(R.id.navigation_item_4));
         wishlist=(TextView) MenuItemCompat.getActionView(navigationView.getMenu().
-                findItem(R.id.navigation_item_5));
+                findItem(R.id.notes));
         delivery=(TextView) MenuItemCompat.getActionView(navigationView.getMenu().
                 findItem(R.id.navigation_item_7));
         recent_activities=(TextView) MenuItemCompat.getActionView(navigationView.getMenu().
@@ -163,8 +163,33 @@ public class BusinessActivity extends AppCompatActivity
         }
 
         setUpNavDrawer();
-
-        mNavigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                int id = item.getItemId();
+                mDrawerLayout.closeDrawers();
+                switch (id){
+                    case R.id.recent_activities:
+                        Intent recent_act = new Intent(BusinessActivity.this, Recent_Activities.class);
+                        startActivity(recent_act);
+                        break;
+                    case R.id.promo_coupons:
+                        Intent promo_coups = new Intent(BusinessActivity.this, Recent_Activities.class);
+                        startActivity(promo_coups);
+                        break;
+                    case R.id.goal_specific_coupons:
+                        Intent goal_specific_coups = new Intent(BusinessActivity.this, GoalSpecific.class);
+                        startActivity(goal_specific_coups);
+                        break;
+                    case R.id.notes:
+                        Intent wishlist = new Intent(BusinessActivity.this, WishList.class);
+                        startActivity(wishlist);
+                        break;
+                }
+                return false;
+            }
+        });
+        //NavigationView = (NavigationView) findViewById(R.id.nav_view);
         // mContentFrame = (FrameLayout) findViewById(R.id.nav_contentframe);
 
     }
@@ -285,6 +310,7 @@ public class BusinessActivity extends AppCompatActivity
     }
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+
         return false;
     }
 }
