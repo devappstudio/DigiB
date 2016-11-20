@@ -15,7 +15,7 @@ public class MainGenerator {
 
         try
         {
-            new DaoGenerator().generateAll(schema,PROJECT_DIR+"\\app\\src\\main\\java");
+            new DaoGenerator().generateAll(schema,PROJECT_DIR+"/app/src/main/java");
         }
         catch (Exception e)
         {
