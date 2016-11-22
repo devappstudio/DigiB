@@ -123,6 +123,11 @@
             android:label="Lean Application"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name="dev.mobile.digibanq.activity.Recover_pass"
+            android:label="Recover Password"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

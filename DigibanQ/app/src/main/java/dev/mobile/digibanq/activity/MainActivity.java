@@ -14,7 +14,7 @@ import info.androidhive.digibanq.R;
 public class MainActivity extends AppCompatActivity {
 
     Button login;
-    TextView help, signup;
+    TextView recover, signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         login = (Button)findViewById(R.id.btn_signin);
         signup =  (TextView) findViewById(R.id.reg);
+        recover = (TextView) findViewById(R.id.rec_password);
 
 
         login.setOnClickListener(new View.OnClickListener(){
@@ -46,6 +47,16 @@ public class MainActivity extends AppCompatActivity {
                 // Perform action on click
                 Intent reg = new Intent(MainActivity.this, Register.class);
                 MainActivity.this.startActivity(reg);
+            }
+
+
+        });
+
+        recover.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                // Perform action on click
+                Intent rec = new Intent(MainActivity.this, Recover_pass.class);
+                MainActivity.this.startActivity(rec);
             }
 
 
