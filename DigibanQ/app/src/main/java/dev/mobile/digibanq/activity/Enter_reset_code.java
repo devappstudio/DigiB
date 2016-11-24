@@ -12,12 +12,12 @@ import android.widget.TextView;
 import info.androidhive.digibanq.R;
 
 /**
- * Created by banktech on 11/22/2016.
+ * Created by banktech on 11/24/2016.
  */
 
-public class Recover_pass extends AppCompatActivity {
+public class Enter_reset_code extends AppCompatActivity {
 
-    Button recover;
+    Button reset;
     TextView back;
 
     @Override
@@ -28,17 +28,18 @@ public class Recover_pass extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        setContentView(R.layout.recover_password);
+        setContentView(R.layout.enter_reset_code);
 
-        recover = (Button)findViewById(R.id.recover);
+        reset = (Button)findViewById(R.id.reset_code);
         back = (TextView)findViewById(R.id.back);
 
 
-        recover.setOnClickListener(new View.OnClickListener(){
+        reset.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 // Perform action on click
-                Intent reg = new Intent(Recover_pass.this, Enter_reset_code.class);
-                Recover_pass.this.startActivity(reg);
+                Intent reg = new Intent(Enter_reset_code.this, Reset_password.class);
+                Enter_reset_code.this.startActivity(reg);
+
 
             }
         });
@@ -46,8 +47,8 @@ public class Recover_pass extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 // Perform action on click
-                Intent reg = new Intent(Recover_pass.this, MainActivity.class);
-                Recover_pass.this.startActivity(reg);
+                Intent reg = new Intent(Enter_reset_code.this, Recover_pass.class);
+                Enter_reset_code.this.startActivity(reg);
             }
 
 

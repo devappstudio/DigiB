@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,6 +8,7 @@
     android:layout_marginLeft="20dp"
     android:background="@android:color/white">
     <LinearLayout
+        android:id="@+id/items"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
@@ -20,15 +21,31 @@
             android:textSize="14dp"
             android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp" />
-       <!-- <EditText
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:hint="GHS"
-            android:textColorHint="@color/windowBackground"
-            android:textColor="@color/windowBackground"
-            android:background="#DBDBEA"/> -->
+            android:paddingBottom="10dp"
+            android:text="item name"/>
 
 
     </LinearLayout>
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/items_amount"
+        android:layout_alignLeft="@+id/items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/expandedListEditbox"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:hint="GHS"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:background="#DBDBEA"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

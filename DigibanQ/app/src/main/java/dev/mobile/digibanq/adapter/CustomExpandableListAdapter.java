@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.HashMap;
@@ -49,6 +50,9 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
         TextView expandedListTextView = (TextView) convertView
                 .findViewById(R.id.expandedListItem);
         expandedListTextView.setText(expandedListText);
+
+        EditText expandedEditBox = (EditText) convertView.findViewById(R.id.expandedListEditbox);
+        expandedEditBox.setText(" ");
         return convertView;
     }
 

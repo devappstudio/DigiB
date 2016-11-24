@@ -38,7 +38,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:textAlignment="center"
-            android:text="We just need your registered Email ID to send you password reset instructions"
+            android:text="We just need you to enter the reset code"
             android:textSize="16sp"
             android:textColor="@color/white"/>
 
@@ -49,18 +49,18 @@
             android:layout_marginTop="50dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:hint="Email"
+            android:hint="Enter Code"
             android:textColorHint="@color/white"/>
 
         <Button
-            android:id="@+id/recover"
+            android:id="@+id/reset_code"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/white"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:text="Request Reset Code"/>
+            android:text="Enter To Reset"/>
 
         <TextView
             android:id="@+id/back"
