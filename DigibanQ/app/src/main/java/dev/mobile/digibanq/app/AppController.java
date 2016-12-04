@@ -10,6 +10,8 @@ import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
 
 import dev.mobile.digibanq.volley.LruBitmapCache;
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
 
 public class AppController extends Application {
 
@@ -25,6 +27,12 @@ public class AppController extends Application {
 	public void onCreate() {
 		super.onCreate();
 		mInstance = this;
+		Realm.init(getApplicationContext());
+		RealmConfiguration config = new RealmConfiguration.Builder()
+				.deleteRealmIfMigrationNeeded()
+				.build();
+
+
 	}
 
 	public static synchronized AppController getInstance() {
