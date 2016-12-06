@@ -7,6 +7,7 @@ package dev.mobile.digibanq.db;
 // KEEP INCLUDES END
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Entity mapped to table "BUDGET_CONTENT".
@@ -14,7 +15,7 @@ import io.realm.RealmObject;
 public class BudgetContent extends RealmObject{
     private Boolean pendingsync;
     private String lastsync;
-
+    @PrimaryKey
     private int id;
     private int idbudgetcategory;
     private String name;

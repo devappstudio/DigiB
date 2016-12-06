@@ -7,12 +7,13 @@ package dev.mobile.digibanq.db;
 // KEEP INCLUDES END
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Entity mapped to table "BUDGET_CATEGORY".
  */
 public class BudgetCategory extends RealmObject {
-
+    @PrimaryKey
     private int id;
     private String name;
     private Boolean iscustom;

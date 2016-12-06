@@ -8,7 +8,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import dev.mobile.digibanq.db.User;
 import info.androidhive.digibanq.R;
+import io.realm.Realm;
+import io.realm.RealmObject;
+import io.realm.RealmResults;
 
 
 public class LaunchScreenActivity extends AppCompatActivity {
@@ -36,12 +40,27 @@ public class LaunchScreenActivity extends AppCompatActivity {
 
     private class BackgroundTask extends AsyncTask {
         Intent intent;
-
+        Realm realm = Realm.getDefaultInstance();
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-
+            RealmResults<User> user = realm.where(User.class).findAll();
+            intent = new Intent(LaunchScreenActivity.this, BusinessActivity.class);
+            if(user.isEmpty())
             intent = new Intent(LaunchScreenActivity.this, WelcomeActivity.class);
+            else
+            {
+                User user1 = realm.where(User.class).findFirst();
+                if(user1.getSmscode().equalsIgnoreCase("0"))
+                {
+                    intent = new Intent(LaunchScreenActivity.this, ConfirmCode.class);
+                }
+                else
+                {
+                    intent = new Intent(LaunchScreenActivity.this, BusinessActivity.class);
+                }
+            }
+
         }
 
         @Override

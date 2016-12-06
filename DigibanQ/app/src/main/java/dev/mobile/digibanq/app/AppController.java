@@ -29,11 +29,12 @@ public class AppController extends Application {
 		mInstance = this;
 		Realm.init(getApplicationContext());
 		RealmConfiguration config = new RealmConfiguration.Builder()
+				.schemaVersion(3)
 				.deleteRealmIfMigrationNeeded()
 				.build();
 
 
-	}
+			}
 
 	public static synchronized AppController getInstance() {
 		return mInstance;

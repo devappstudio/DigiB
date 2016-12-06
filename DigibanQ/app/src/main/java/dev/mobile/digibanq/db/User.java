@@ -7,14 +7,15 @@ package dev.mobile.digibanq.db;
 // KEEP INCLUDES END
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Entity mapped to table "USER".
  */
 public class User extends RealmObject {
-
+    @PrimaryKey
     private int id;
-    private Integer serverid;
+    private int serverid;
 
     
     private String fullname;
@@ -45,7 +46,7 @@ public class User extends RealmObject {
         this.id = id;
     }
 
-    public User(int id, Integer serverid, String fullname, String phone, String email, String dob, String smscode, String address, Boolean pendingsync, String lastsync, Double wallet) {
+    public User(int id, int serverid, String fullname, String phone, String email, String dob, String smscode, String address, Boolean pendingsync, String lastsync, Double wallet) {
         this.id = id;
         this.serverid = serverid;
         this.fullname = fullname;
@@ -67,11 +68,11 @@ public class User extends RealmObject {
         this.id = id;
     }
 
-    public Integer getServerid() {
+    public int getServerid() {
         return serverid;
     }
 
-    public void setServerid(Integer serverid) {
+    public void setServerid(int serverid) {
         this.serverid = serverid;
     }
 

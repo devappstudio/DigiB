@@ -8,12 +8,13 @@ package dev.mobile.digibanq.db;
 
 import io.realm.Realm;
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Entity mapped to table "EMPLOYMENT_DETAILS".
  */
 public class EmploymentDetails extends RealmObject{
-
+@PrimaryKey
     private int id;
 
     private String companyname;
