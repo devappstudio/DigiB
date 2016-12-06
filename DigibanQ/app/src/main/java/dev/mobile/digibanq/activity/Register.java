@@ -49,9 +49,8 @@ public class Register extends AppCompatActivity{
 
         setContentView(R.layout.register);
         Random r = new Random();
-        code = ""+r.nextInt(999 - 100) + 100;
-
-
+        int i1 = r.nextInt(999 - 100 + 1) + 100;
+        code = ""+i1;
 
         fullname = (EditText)findViewById(R.id.etFullName);
         password = (EditText)findViewById(R.id.etPassword);
@@ -130,6 +129,7 @@ public class Register extends AppCompatActivity{
 
                 @Override
                 public void onFailure(Throwable t) {
+                    t.printStackTrace();
                     pd.hide();
 
                 }

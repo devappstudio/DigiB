@@ -63,7 +63,7 @@ public class ConfirmCode extends AppCompatActivity {
             user.setSmscode("1");
             realm.copyToRealmOrUpdate(user);
             realm.commitTransaction();
-            Intent reg = new Intent(ConfirmCode.this, RegDetailsPersonal.class);
+            Intent reg = new Intent(ConfirmCode.this, BusinessActivity.class);
             ConfirmCode.this.startActivity(reg);
 
         }
