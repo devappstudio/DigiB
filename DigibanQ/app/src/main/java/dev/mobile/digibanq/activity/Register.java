@@ -65,6 +65,10 @@ public class Register extends AppCompatActivity{
             public void onClick(View v){
                 // Perform action on click
                 Intent signIn = new Intent(Register.this, MainActivity.class);
+                signIn.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                signIn.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                signIn.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+
                 Register.this.startActivity(signIn);
 
             }
@@ -75,6 +79,7 @@ public class Register extends AppCompatActivity{
                 // Perform action on click
 //                Intent reg = new Intent(Register.this, ConfirmCode.class);
 //                Register.this.startActivity(reg);
+
                 register_user();
             }
 

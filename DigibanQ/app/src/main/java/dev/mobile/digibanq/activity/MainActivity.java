@@ -37,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v){
                 // Perform action on click
                 Intent signIn = new Intent(MainActivity.this, BusinessActivity.class);
+                signIn.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                signIn.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                signIn.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+
                 MainActivity.this.startActivity(signIn);
 
             }
@@ -46,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Perform action on click
                 Intent reg = new Intent(MainActivity.this, Register.class);
+                reg.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                reg.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                reg.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+
                 MainActivity.this.startActivity(reg);
             }
 
@@ -56,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Perform action on click
                 Intent rec = new Intent(MainActivity.this, Recover_pass.class);
+                rec.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                rec.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                rec.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+
                 MainActivity.this.startActivity(rec);
             }
 

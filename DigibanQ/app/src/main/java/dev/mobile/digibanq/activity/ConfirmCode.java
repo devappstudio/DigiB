@@ -64,6 +64,9 @@ public class ConfirmCode extends AppCompatActivity {
             realm.copyToRealmOrUpdate(user);
             realm.commitTransaction();
             Intent reg = new Intent(ConfirmCode.this, BusinessActivity.class);
+            reg.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            reg.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            reg.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             ConfirmCode.this.startActivity(reg);
 
         }
