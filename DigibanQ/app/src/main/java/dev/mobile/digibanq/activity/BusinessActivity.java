@@ -2,6 +2,7 @@ package dev.mobile.digibanq.activity;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
@@ -12,15 +13,24 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
+import android.text.method.PasswordTransformationMethod;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import info.androidhive.digibanq.R;
 
@@ -50,6 +60,9 @@ public class BusinessActivity extends AppCompatActivity
     private boolean mFromSavedInstanceState;
     private int mCurrentSelectedPosition;
     TextView feeds,wishlist,delivery, name, companyName,recent_activities,promo_coupons,goal_coupons,notes;
+    TextView userActivity, userActivityTxt, userActivityMsg,
+            suggested_bugdet_txt, userActivityTwo, userActivityMsgTwo,
+            header_text_org, userActivityThree, userActivityMsgFour, suggested_bugdet_txt_two;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +71,38 @@ public class BusinessActivity extends AppCompatActivity
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        userActivity = (TextView)findViewById(R.id.user_profile_name);
+        userActivity.setText(Html.fromHtml("<p><b>Anthony Mens</b></p><p>and</p><p><b>2 contacts</b>"));
+
+        userActivityTxt = (TextView)findViewById(R.id.userActivityText);
+        userActivityTxt.setText(Html.fromHtml("<p>shared a promo from <b>Nasco Ghana's</b> \nstory board.</p>"));
+
+        userActivityMsg = (TextView)findViewById(R.id.userActivityMsg);
+        userActivityMsg.setText(Html.fromHtml("<p><b>Thanks to Nasco i taught i should share this \nwonderful moment with you.</b></p>"));
+
+        suggested_bugdet_txt = (TextView)findViewById(R.id.suggested_bugdet_txt);
+        suggested_bugdet_txt.setText(Html.fromHtml("<p>Spend to save <b>GHS 100</b> towards your goal</p><b>GHS 1,200 before NOV 30</b>"));
+
+        userActivityTwo = (TextView)findViewById(R.id.user_profile_name2);
+        userActivityTwo.setText(Html.fromHtml("<p><b>Andrew Martin</b></p><p>- Review</p><p><b>3 stars</b>"));
+
+        userActivityMsgTwo = (TextView)findViewById(R.id.userActivityMsg1);
+        userActivityMsgTwo.setText(Html.fromHtml("<p>Its been an amazing experience using this brand of watch, i never regretted the day i bought it</p>"));
+
+        userActivityThree = (TextView)findViewById(R.id.user_profile_name2);
+        userActivityThree.setText(Html.fromHtml("<p><b>Andrew Martin</b></p><p>- Review</p><p><b>3 stars</b>"));
+
+        userActivityMsgFour = (TextView)findViewById(R.id.userActivityMsg2);
+        userActivityMsgFour.setText(Html.fromHtml("<p>Its been an amazing experience using this brand of watch, i never regretted the day i bought it</p>"));
+
+        header_text_org = (TextView)findViewById(R.id.header_text_org);
+        header_text_org.setText(Html.fromHtml("<p><b>Suggested Profiles</b></p><p>- Organisations</p><p>"));
+
+        suggested_bugdet_txt_two = (TextView)findViewById(R.id.suggested_bugdet_txt2);
+        suggested_bugdet_txt_two.setText(Html.fromHtml("<p>Take an action to earn some redeemable coins</p>"));
+
+
         /*fab = (FloatingActionButton)findViewById(R.id.fab);
         fab1 = (FloatingActionButton)findViewById(R.id.fab1);
         fab2 = (FloatingActionButton)findViewById(R.id.fab2);
@@ -98,10 +143,10 @@ public class BusinessActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this); */
 
-        button = (ImageButton)findViewById(R.id.get_now);
+        //button = (ImageButton)findViewById(R.id.get_now);
 
         // add button listener
-        button.setOnClickListener(new View.OnClickListener() {
+        /*button.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -124,12 +169,12 @@ public class BusinessActivity extends AppCompatActivity
                     public void onClick(View v) {
                         dialog.dismiss();
                     }
-                });*/
+                });
 
                 dialog.show();
 
             }
-        });
+        }); */
 
 
 
@@ -192,6 +237,41 @@ public class BusinessActivity extends AppCompatActivity
         //NavigationView = (NavigationView) findViewById(R.id.nav_view);
         // mContentFrame = (FrameLayout) findViewById(R.id.nav_contentframe);
 
+    }
+
+    public void ButtonBuyNow(View view) {
+        LayoutInflater inflater = getLayoutInflater();
+        View alertLayout = inflater.inflate(R.layout.layout_custom_dialog, null);
+        final Button pay_from_wallet = (Button) alertLayout.findViewById(R.id.pay_from_wallet);
+        final Button other_payment = (Button) alertLayout.findViewById(R.id.other_payment);
+        final Button gift_code = (Button) alertLayout.findViewById(R.id.gift_code);
+
+        pay_from_wallet.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                // Perform action on click
+                Intent pay = new Intent(BusinessActivity.this, FinancialActivity.class);
+                BusinessActivity.this.startActivity(pay);
+
+            }
+        });
+
+
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Buying options");
+        // this is set the view from XML inside AlertDialog
+        alert.setView(alertLayout);
+        // disallow cancel of AlertDialog on click of back button and outside touch
+        alert.setCancelable(false);
+        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(getBaseContext(), "Cancelled", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        AlertDialog dialog = alert.create();
+        dialog.show();
     }
 
     public void recent_act(){
