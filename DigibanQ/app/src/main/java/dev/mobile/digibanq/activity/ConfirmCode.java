@@ -3,6 +3,8 @@ package dev.mobile.digibanq.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -37,6 +39,95 @@ public class ConfirmCode extends AppCompatActivity {
         one = (EditText)findViewById(R.id.codeOne);
         two = (EditText)findViewById(R.id.codeTwo);
         three = (EditText)findViewById(R.id.codeThree);
+
+        one.addTextChangedListener(new TextWatcher() {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // TODO Auto-generated method stub
+                if(one.getText().toString().length()==1)
+                {
+                    one.clearFocus();
+                    two.requestFocus();
+                    two.setCursorVisible(true);
+
+                }
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // TODO Auto-generated method stub
+
+            }
+
+
+        });
+
+
+        two.addTextChangedListener(new TextWatcher() {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // TODO Auto-generated method stub
+                if(one.getText().toString().length()==1)
+                {
+                    two.clearFocus();
+                    three.requestFocus();
+                    three.setCursorVisible(true);
+
+                }
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // TODO Auto-generated method stub
+
+            }
+
+
+        });
+
+
+        three.addTextChangedListener(new TextWatcher() {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // TODO Auto-generated method stub
+                if(one.getText().toString().length()==1)
+                {
+                    three.clearFocus();
+                    btn_confirm.requestFocus();
+                }
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // TODO Auto-generated method stub
+
+            }
+
+
+        });
+
+
+
+
+
 
         btn_confirm.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
