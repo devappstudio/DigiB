@@ -4,6 +4,92 @@
     <list default="true" id="75d32c01-a84f-45d5-a6a8-e661b7940570" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/digibanq.iml" afterPath="$PROJECT_DIR$/.idea/digibanq.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/anim/shrink_color.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/anim/shrink_color.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/anim/simple_grow.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/anim/simple_grow.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/anim/simple_shrink.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/anim/simple_shrink.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/animator/fab_elevation_selector.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/animator/fab_elevation_selector.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/color/tab_selector.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/color/tab_selector.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable-nodpi/ic_menu_send.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable-nodpi/ic_menu_send.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable-nodpi/ic_menu_share.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable-nodpi/ic_menu_share.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/fab_selector.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/fab_selector.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/ic_chevron_right_24dp.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/ic_chevron_right_24dp.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/ic_explore_24dp.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/ic_explore_24dp.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/ic_flight_24dp.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/ic_flight_24dp.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/ic_mail_24dp.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/ic_mail_24dp.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/ic_query_builder_24dp.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/ic_query_builder_24dp.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/ripple_accent.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/ripple_accent.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/switch_thumb.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/switch_thumb.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/switch_track.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/switch_track.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/vector_share.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/drawable/vector_share.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/activity_launch_screen.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/activity_launch_screen.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/activity_main.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/activity_welcome.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/activity_welcome.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/alerts_fragments.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/alerts_fragments.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/budget_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/budget_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/drawer_header.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/drawer_header.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/dummy_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/dummy_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/fragment_list.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/fragment_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/fragment_pager.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/fragment_pager.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/gmail_list_item.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/gmail_list_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/goal_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/goal_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/highlight_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/highlight_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/inboxfragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/inboxfragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/money_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/money_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/myfab.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/myfab.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/programs_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/programs_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/public_timeline_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/public_timeline_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/recyclerlist_item.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/recyclerlist_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/store_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/store_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/store_front_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/store_front_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/toolbar.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/toolbar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/welcome_slide1.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/welcome_slide1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/welcome_slide2.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/welcome_slide2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/welcome_slide3.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/welcome_slide3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/welcome_slide4.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout-large/welcome_slide4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/activity_launch_screen.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/activity_launch_screen.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/activity_welcome.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/activity_welcome.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/alerts_fragments.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/alerts_fragments.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/budget_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/budget_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/confirm_code.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/confirm_code.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/drawer_header.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/drawer_header.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/dummy_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/dummy_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/fragment_list.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/fragment_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/fragment_pager.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/fragment_pager.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/gmail_list_item.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/gmail_list_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/goal_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/goal_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/highlight_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/highlight_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/important_notice.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/important_notice.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/inboxfragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/inboxfragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/layout_business.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/layout_business.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/layout_custom_dialog.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/layout_custom_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/money_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/money_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/myfab.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/myfab.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/profile_screen.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/profile_screen.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/programs_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/programs_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/public_timeline_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/public_timeline_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/recyclerlist_item.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/recyclerlist_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/register.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/register.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/store_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/store_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/store_front_fragment.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/store_front_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/toolbar.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/toolbar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/welcome_slide1.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/welcome_slide1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/welcome_slide2.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/welcome_slide2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/welcome_slide3.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/welcome_slide3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/welcome_slide4.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/layout/welcome_slide4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/menu/drawer.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/menu/drawer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/menu/menu_main.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/menu/menu_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/menu/menu_nested_toolbar.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/menu/menu_nested_toolbar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/menu/menu_pager.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/menu/menu_pager.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/menu/menu_reveal.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/menu/menu_reveal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/menu/menu_tab_switch.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/menu/menu_tab_switch.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/values-v21/arrays.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/values-v21/arrays.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/values-v21/styles.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/values-v21/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/values-w820dp/dimens.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/values-w820dp/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/values/colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/values/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigibanQ/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/DigibanQ/app/src/main/res/values/styles.xml" />
     </list>
     <ignored path="digibanq.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -397,7 +483,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
