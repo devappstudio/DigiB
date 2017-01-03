@@ -54,6 +54,11 @@
     <string name="cmd_text">Well done, lets start by adding new goal or select from our listed options</string>
     <string name="product_hint">Enter Products for the Store</string>
     <string name="department_store">My Department Store &#8230;</string>
+    <string name="change_merchant">Change merchant</string>
+    <string name="important_notice">Important notice!</string>
+    <string name="nulla_dignissim_elit_et_libero_luctus_convallis_at_in_urna_maecenas_id_efficitur_eros_morbi_orci_libero_dapibus_nec_nibh_nec_tristique_pulvinar_sem_nulla_dignissim_elit_et_libero_luctus_convallis_at_in_urna_nulla_dignissim_elit_et_libero_luctus_convallis_at_in_urna_maecenas_id_efficitur_eros_morbi_orci_libero_dapibus_nec_nibh_nec_tristique_pulvinar_sem_nulla_dignissim_elit_et_libero_luctus_convallis_at_in_urna">Nulla dignissim elit et libero luctus convallis at in urna. Maecenas id efficitur eros. Morbi orci libero, dapibus nec nibh nec, tristique pulvinar sem. Nulla dignissim elit et libero luctus convallis at in urna. Nulla dignissim elit et libero luctus convallis at in urna. Maecenas id efficitur eros. Morbi orci libero, dapibus nec nibh nec, tristique pulvinar sem. Nulla dignissim elit et libero luctus convallis at in urna.</string>
+    <string name="proceed">Proceed</string>
+    <string name="close">close</string>
 
     <string-array name="dept_array">
         <item>Apparel</item>

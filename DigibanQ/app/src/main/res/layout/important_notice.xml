@@ -1,25 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
-
-    <!-- <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay"/>
-
-    </android.support.design.widget.AppBarLayout> -->
 
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -38,7 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:gravity="right"
+            android:gravity="end"
+            android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
             android:orientation="horizontal">
 
@@ -48,6 +28,8 @@
                 android:layout_marginTop="2dp"
                 android:src="@drawable/ic_action_navigation_close"
                 android:layout_marginLeft="170dp"
+                android:layout_marginStart="170dp"
+                android:contentDescription="@string/close"
                 android:background="#fff"/>
 
         </LinearLayout>
@@ -57,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:gravity="left"
+            android:gravity="start"
             android:layout_below="@+id/cancel"
             android:orientation="vertical">
 
@@ -66,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:text="Important notice!"
+                android:text="@string/important_notice"
                 android:textColor="@color/black"
                 android:textSize="20sp"/>
 
@@ -84,8 +66,9 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:inputType="textMultiLine"
-                android:text="Nulla dignissim elit et libero luctus convallis at in urna. Maecenas id efficitur eros. Morbi orci libero, dapibus nec nibh nec, tristique pulvinar sem. Nulla dignissim elit et libero luctus convallis at in urna. Nulla dignissim elit et libero luctus convallis at in urna. Maecenas id efficitur eros. Morbi orci libero, dapibus nec nibh nec, tristique pulvinar sem. Nulla dignissim elit et libero luctus convallis at in urna."
-                android:textSize="14sp"/>
+                android:text="@string/nulla_dignissim_elit_et_libero_luctus_convallis_at_in_urna_maecenas_id_efficitur_eros_morbi_orci_libero_dapibus_nec_nibh_nec_tristique_pulvinar_sem_nulla_dignissim_elit_et_libero_luctus_convallis_at_in_urna_nulla_dignissim_elit_et_libero_luctus_convallis_at_in_urna_maecenas_id_efficitur_eros_morbi_orci_libero_dapibus_nec_nibh_nec_tristique_pulvinar_sem_nulla_dignissim_elit_et_libero_luctus_convallis_at_in_urna"
+                android:textSize="14sp"
+                tools:ignore="TextViewEdits" />
 
         </LinearLayout>
 
@@ -101,19 +84,20 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/feed_bg"
-                android:text="Change merchant"
+                android:text="@string/change_merchant"
                 />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:background="@color/light_blue"
+                style="?android:attr/buttonBarButtonStyle"
                 android:textColor="@color/white"
-                android:text="Proceed"
+                android:text="@string/proceed"
                 />
         </LinearLayout>
     </RelativeLayout>
-
-</LinearLayout>
