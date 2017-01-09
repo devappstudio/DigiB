@@ -42,7 +42,6 @@ public class ConfirmCode extends AppCompatActivity {
 
         one.addTextChangedListener(new TextWatcher() {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // TODO Auto-generated method stub
                 if(one.getText().toString().length()==1)
                 {
                     one.clearFocus();
@@ -55,13 +54,11 @@ public class ConfirmCode extends AppCompatActivity {
             public void beforeTextChanged(CharSequence s, int start, int count,
                                           int after) {
 
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-                // TODO Auto-generated method stub
 
             }
 
@@ -71,7 +68,6 @@ public class ConfirmCode extends AppCompatActivity {
 
         two.addTextChangedListener(new TextWatcher() {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // TODO Auto-generated method stub
                 if(one.getText().toString().length()==1)
                 {
                     two.clearFocus();
@@ -84,13 +80,11 @@ public class ConfirmCode extends AppCompatActivity {
             public void beforeTextChanged(CharSequence s, int start, int count,
                                           int after) {
 
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-                // TODO Auto-generated method stub
 
             }
 
@@ -100,7 +94,6 @@ public class ConfirmCode extends AppCompatActivity {
 
         three.addTextChangedListener(new TextWatcher() {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // TODO Auto-generated method stub
                 if(one.getText().toString().length()==1)
                 {
                     three.clearFocus();
@@ -111,13 +104,11 @@ public class ConfirmCode extends AppCompatActivity {
             public void beforeTextChanged(CharSequence s, int start, int count,
                                           int after) {
 
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-                // TODO Auto-generated method stub
 
             }
 
