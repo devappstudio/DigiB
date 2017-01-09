@@ -72,6 +72,7 @@ public class BusinessActivity extends AppCompatActivity
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         userActivity = (TextView)findViewById(R.id.user_profile_name);
         userActivity.setText(Html.fromHtml("<p><b>Anthony Mens</b></p><p>and</p><p><b>2 contacts</b>"));
 
@@ -249,7 +250,43 @@ public class BusinessActivity extends AppCompatActivity
         pay_from_wallet.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 // Perform action on click
-                Intent pay = new Intent(BusinessActivity.this, FinancialActivity.class);
+                Intent pay = new Intent(BusinessActivity.this, Wallet_payment.class);
+                BusinessActivity.this.startActivity(pay);
+
+            }
+        });
+
+
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Buying options");
+        // this is set the view from XML inside AlertDialog
+        alert.setView(alertLayout);
+        // disallow cancel of AlertDialog on click of back button and outside touch
+        alert.setCancelable(false);
+        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(getBaseContext(), "Cancelled", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        AlertDialog dialog = alert.create();
+        dialog.show();
+    }
+
+    
+    public void ButtonChooseProfile(View view) {
+        LayoutInflater inflater = getLayoutInflater();
+        View alertLayout = inflater.inflate(R.layout.choose_profile, null);
+        final Button continue_one = (Button) alertLayout.findViewById(R.id.pay_from_wallet);
+        final Button continue_two = (Button) alertLayout.findViewById(R.id.other_payment);
+        final Button continue_three = (Button) alertLayout.findViewById(R.id.gift_code);
+
+        continue_one.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                // Perform action on click
+                Intent pay = new Intent(BusinessActivity.this, Wallet_payment.class);
                 BusinessActivity.this.startActivity(pay);
 
             }

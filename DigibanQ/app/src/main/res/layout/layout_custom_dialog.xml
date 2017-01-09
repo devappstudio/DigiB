@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
+        android:gravity="left"
         android:orientation="vertical">
 
         <Button
@@ -16,35 +16,45 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:text="Pay from wallet"/>
+            android:text="Pay from wallet"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"/>
 
         <Button
             android:id="@+id/other_payment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:text="Use other payment options"/>
+            android:text="Use other payment options"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"/>
 
         <Button
             android:id="@+id/gift_code"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:text="Buy as gift code"/>
+            android:text="Buy as gift code"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"/>
 
         <Button
             android:id="@+id/pay_bank_loan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:text="Pay with bank loan"/>
+            android:text="Pay with bank loan"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"/>
 
         <Button
             android:id="@+id/buy_promo_code"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:text="Buy as promo code"/>
+            android:text="Buy as promo code"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"/>
 
     </LinearLayout>
 
