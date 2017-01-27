@@ -58,7 +58,7 @@ android:background="#F1F5F8">
                 android:drawableLeft="@drawable/user"
                 android:hint="Full Name"
                 android:textColor="#757584"
-                android:id="@+id/accType"
+                android:id="@+id/etFullName"
                 android:textSize="12dp"
                 android:textIsSelectable="false" />
 
@@ -73,7 +73,7 @@ android:background="#F1F5F8">
             android:drawableRight="@drawable/ic_remove_red_eye"
             android:hint="Password"
             android:textColor="#757584"
-            android:id="@+id/pass"
+            android:id="@+id/etPassword"
             android:textSize="12dp"
             android:textIsSelectable="false" />
         <TextView
@@ -98,7 +98,7 @@ android:background="#F1F5F8">
                 android:drawableLeft="@drawable/ic_local_phone_black"
                 android:textColor="#757584"
                 android:digits="0123456789+"
-                android:id="@+id/phone"
+                android:id="@+id/etPhoneNumber"
                 android:textSize="12dp" />
         <TextView
             android:layout_width="wrap_content"
@@ -121,7 +121,7 @@ android:background="#F1F5F8">
                 android:textColorHint="#757584"
                 android:drawableLeft="@drawable/email"
                 android:textColor="#757584"
-                android:id="@+id/email"
+                android:id="@+id/etEmail"
                 android:textSize="12dp"
                 android:textIsSelectable="false" />
 

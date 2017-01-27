@@ -47,7 +47,6 @@
                 android:layout_height="40dip"
                 android:background="@color/windowBackground"
                 android:layout_marginLeft="10dp"
-                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:inputType="text"
                 android:hint="full name here"
@@ -95,6 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_below="@+id/logoTxt"
                 android:text="Your surname"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="20dp"
@@ -121,6 +121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_below="@+id/logoTxt"
                 android:text="Your maiden name"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -304,7 +305,7 @@
                     android:textColorHint="#757584"
                     android:textColor="#757584"
                     android:id="@+id/voter2"
-                    android:textSize="12sp" />
+                    android:textSize="12dp" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
@@ -318,7 +319,7 @@
                     android:textColorHint="#757584"
                     android:textColor="#757584"
                     android:id="@+id/passport2"
-                    android:textSize="12sp" />
+                    android:textSize="12dp" />
 
 
             </RadioGroup>

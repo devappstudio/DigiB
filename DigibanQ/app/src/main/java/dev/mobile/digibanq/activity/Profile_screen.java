@@ -2,29 +2,33 @@ package dev.mobile.digibanq.activity;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.TabLayout;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.view.View;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.graphics.Palette;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import dev.mobile.digibanq.adapter.SimpleRecyclerAdapter;
-import dev.mobile.digibanq.fragments.BudgetFragment;
-import dev.mobile.digibanq.fragments.GoalFragment;
-import dev.mobile.digibanq.fragments.HighlightFragment;
+import dev.mobile.digibanq.model.VersionModel;
+import dev.mobile.digibanq.utils.Utils;
 import info.androidhive.digibanq.R;
 
 /**
@@ -32,14 +36,12 @@ import info.androidhive.digibanq.R;
  */
 
 public class Profile_screen extends AppCompatActivity {
-    //CollapsingToolbarLayout collapsingToolbar;
+    CollapsingToolbarLayout collapsingToolbar;
     RecyclerView recyclerView;
     int mutedColor = R.attr.colorPrimary;
     SimpleRecyclerAdapter simpleRecyclerAdapter;
     private TabLayout tabLayout;
     private ViewPager viewPager;
-
-    public static final String EXTRA_NAME = "cheese_name";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,28 +53,15 @@ public class Profile_screen extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
-        setupViewPager(viewPager);
+        collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        collapsingToolbar.setTitle("");
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
-        tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(viewPager);
-
-        //loadBackdrop();
+        ImageView header = (ImageView) findViewById(R.id.header);
 
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),
                 R.drawable.header);
 
-        /*Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
+        Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
             @SuppressWarnings("ResourceType")
             @Override
             public void onGenerated(Palette palette) {
@@ -81,45 +70,29 @@ public class Profile_screen extends AppCompatActivity {
                 collapsingToolbar.setContentScrimColor(mutedColor);
                 collapsingToolbar.setStatusBarScrimColor(R.color.black_trans80);
             }
-        });*/
+        });
 
-    }
+        recyclerView = (RecyclerView) findViewById(R.id.scrollableview);
 
-    private void setupViewPager(ViewPager viewPager) {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new HighlightFragment(), "Highlights");
-        adapter.addFragment(new BudgetFragment(), "Budgets");
-        adapter.addFragment(new GoalFragment(), "Goals");
-        viewPager.setAdapter(adapter);
-    }
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(linearLayoutManager);
 
-    class ViewPagerAdapter extends FragmentPagerAdapter {
-        private final List<Fragment> mFragmentList = new ArrayList<>();
-        private final List<String> mFragmentTitleList = new ArrayList<>();
-
-        public ViewPagerAdapter(FragmentManager manager) {
-            super(manager);
+        List<String> listData = new ArrayList<String>();
+        int ct = 0;
+        for (int i = 0; i < VersionModel.data.length * 2; i++) {
+            listData.add(VersionModel.data[ct]);
+            ct++;
+            if (ct == VersionModel.data.length) {
+                ct = 0;
+            }
         }
 
-        @Override
-        public Fragment getItem(int position) {
-            return mFragmentList.get(position);
+        if (simpleRecyclerAdapter == null) {
+            simpleRecyclerAdapter = new SimpleRecyclerAdapter(listData);
+            recyclerView.setAdapter(simpleRecyclerAdapter);
         }
 
-        @Override
-        public int getCount() {
-            return mFragmentList.size();
-        }
-
-        public void addFragment(Fragment fragment, String title) {
-            mFragmentList.add(fragment);
-            mFragmentTitleList.add(title);
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return mFragmentTitleList.get(position);
-        }
     }
 
     @Override

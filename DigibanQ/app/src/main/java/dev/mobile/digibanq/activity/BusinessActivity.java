@@ -32,10 +32,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import dev.mobile.digibanq.api.UserDetails;
-import dev.mobile.digibanq.db.User;
 import info.androidhive.digibanq.R;
-import io.realm.Realm;
 
 /**
  * Created by banktech on 7/13/2016.
@@ -66,17 +63,11 @@ public class BusinessActivity extends AppCompatActivity
     TextView userActivity, userActivityTxt, userActivityMsg,
             suggested_bugdet_txt, userActivityTwo, userActivityMsgTwo,
             header_text_org, userActivityThree, userActivityMsgFour, suggested_bugdet_txt_two;
-    private  static User user;
-    TextView userName,Number,Phone;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_business);
-        Realm realm = Realm.getDefaultInstance();
-        user = realm.where(User.class).findFirst();
-
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -188,17 +179,6 @@ public class BusinessActivity extends AppCompatActivity
 
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-
-        View header = LayoutInflater.from(this).inflate(R.layout.drawer_header, null);
-        navigationView.addHeaderView(header);
-        userName = (TextView)header.findViewById(R.id.name);
-        Number = (TextView)header.findViewById(R.id.uuid);
-        Phone = (TextView)header.findViewById(R.id.number);
-
-        userName.setText(user.getFullname());
-        Number.setText(user.getUuid());
-        Phone.setText(user.getPhone());
-
         name=(TextView) MenuItemCompat.getActionView(navigationView.getMenu().
                 findItem(R.id.navigation_item_1));
         companyName=(TextView) MenuItemCompat.getActionView(navigationView.getMenu().
@@ -269,41 +249,7 @@ public class BusinessActivity extends AppCompatActivity
         pay_from_wallet.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 // Perform action on click
-                Intent pay = new Intent(BusinessActivity.this, Wallet_payment.class);
-                BusinessActivity.this.startActivity(pay);
-
-            }
-        });
-
-
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setTitle("Buying options");
-        // this is set the view from XML inside AlertDialog
-        alert.setView(alertLayout);
-        // disallow cancel of AlertDialog on click of back button and outside touch
-        alert.setCancelable(false);
-        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(getBaseContext(), "Cancelled", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        AlertDialog dialog = alert.create();
-        dialog.show();
-    }
-    public void ButtonChooseProfile(View view) {
-        LayoutInflater inflater = getLayoutInflater();
-        View alertLayout = inflater.inflate(R.layout.choose_profile, null);
-        final Button continue_one = (Button) alertLayout.findViewById(R.id.pay_from_wallet);
-        final Button continue_two = (Button) alertLayout.findViewById(R.id.other_payment);
-        final Button continue_three = (Button) alertLayout.findViewById(R.id.gift_code);
-
-        continue_one.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                // Perform action on click
-                Intent pay = new Intent(BusinessActivity.this, Wallet_payment.class);
+                Intent pay = new Intent(BusinessActivity.this, FinancialActivity.class);
                 BusinessActivity.this.startActivity(pay);
 
             }

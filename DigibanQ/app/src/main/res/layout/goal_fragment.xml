@@ -2,7 +2,6 @@
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -10,41 +9,34 @@
     <ScrollView
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        tools:ignore="NestedScrolling">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="30dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginBottom="30dp">
-
             <Button
                 android:id="@+id/new_goal"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:textSize="16sp"
-                android:background="@color/feed_bg"
-                android:textColor="@color/blue"
-                android:text="@string/add_new_goal"/>
+                android:background="@color/light_green"
+                android:textColor="@color/white"
+                android:text="Add New Goal"/>
+
             <Button
-                android:background="#128E9A"
-                android:drawableLeft="@drawable/car_loan"
-                android:drawableStart="@drawable/car_loan"
                 android:id="@+id/save_for_car"
-                android:gravity="start|center_vertical"
-                android:text="@string/save_to_buy_a_car"
-                android:textColor="@color/textColorPrimary"
-                android:paddingLeft="70dp"
-                android:paddingStart="70dp"
-                android:paddingEnd="70dp"
-                android:layout_marginTop="30dp"
-                android:textSize="20sp"
-                android:layout_height="70dp"
                 android:layout_width="match_parent"
-                android:drawablePadding="10dp">
-            </Button>
+                android:layout_marginTop="30dp"
+                android:layout_height="70dp"
+                android:textSize="20sp"
+                android:background="@color/dot_dark_screen2"
+                android:textColor="@color/textColorPrimary"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:text="SAVE TO BUY A CAR"/>
 
             <Button
                 android:id="@+id/save_for_house"
@@ -56,7 +48,7 @@
                 android:textColor="@color/textColorPrimary"
                 android:textAlignment="center"
                 android:layout_gravity="center"
-                android:text="@string/save_to_get_a_house"/>
+                android:text="SAVE TO GET A HOUSE"/>
 
             <Button
                 android:id="@+id/save_for_debt"
@@ -68,7 +60,7 @@
                 android:textColor="@color/textColorPrimary"
                 android:textAlignment="center"
                 android:layout_gravity="center"
-                android:text="@string/save_to_pay_a_debt"/>
+                android:text="SAVE TO PAY A DEBT"/>
 
             <Button
                 android:id="@+id/save_for_school"
@@ -80,7 +72,7 @@
                 android:textColor="@color/textColorPrimary"
                 android:textAlignment="center"
                 android:layout_gravity="center"
-                android:text="@string/save_for_school"/>
+                android:text="SAVE FOR SCHOOL"/>
 
         </LinearLayout>
 
