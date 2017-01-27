@@ -293,8 +293,6 @@ public class BusinessActivity extends AppCompatActivity
         AlertDialog dialog = alert.create();
         dialog.show();
     }
-
-    
     public void ButtonChooseProfile(View view) {
         LayoutInflater inflater = getLayoutInflater();
         View alertLayout = inflater.inflate(R.layout.choose_profile, null);
