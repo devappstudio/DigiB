@@ -104,32 +104,42 @@ public class Register extends AppCompatActivity{
 
             ApiEndpoints endpoints = retrofit.create(ApiEndpoints.class);
 
-            Call<UserDetails> insert = endpoints.regitser(fullName,"",Phone,Email,Password,code);
+            Call<UserDetails> insert = endpoints.register(fullName,"",Phone,Email,Password,code);
             insert.enqueue(new Callback<UserDetails>() {
                final ProgressDialog pd  = ProgressDialog.show(Register.this,"Please wait ..."," Please Wait Sending Your Code  ...", true);
 
                 @Override
                 public void onResponse(Response<UserDetails> response, Retrofit retrofit) {
                     pd.hide();
-                    Realm realm = Realm.getDefaultInstance();
-                    realm.beginTransaction();
-                    User user = new User();
-                    user.setId(1);
-                    user.setSmscode("0");
-                    user.setFullname(fullName);
-                    user.setPhone(Phone);
-                    user.setEmail(Email);
-                    ActivationCode activationCode = new ActivationCode(code);
-                    realm.copyToRealmOrUpdate(user);
-                    realm.copyToRealmOrUpdate(activationCode);
-                    realm.commitTransaction();
+                    UserDetails userDetails = response.body();
+                    if(userDetails.getError().equalsIgnoreCase("N/A"))
+                    {
+                        Realm realm = Realm.getDefaultInstance();
+                        realm.beginTransaction();
+                        User user = new User();
+                        user.setId(1);
+                        user.setSmscode("0");
+                        user.setFullname(fullName);
+                        user.setUuid(userDetails.getUnique_id());
+                        user.setPhone(Phone);
+                        user.setEmail(Email);
+                        ActivationCode activationCode = new ActivationCode(code);
+                        realm.copyToRealmOrUpdate(user);
+                        realm.copyToRealmOrUpdate(activationCode);
+                        realm.commitTransaction();
 
-                    Intent reg = new Intent(Register.this, ConfirmCode.class);
-                    reg.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    reg.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    reg.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                    Register.this.startActivity(reg);
-                    finish();
+                        Intent reg = new Intent(Register.this, ConfirmCode.class);
+                        reg.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        reg.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        reg.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                        Register.this.startActivity(reg);
+                        finish();
+
+                    }
+                    else
+                    {
+                        Toast.makeText(Register.this,userDetails.getError(),Toast.LENGTH_LONG).show();
+                    }
                 }
 
                 @Override

@@ -132,8 +132,6 @@ public class ConfirmCode extends AppCompatActivity {
 
     }
 
-
-
     void confirm_code()
     {
         Realm realm= Realm.getDefaultInstance();

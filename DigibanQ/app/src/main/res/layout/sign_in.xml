@@ -24,7 +24,8 @@
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:hint="Phone Number"
-            android:textColorHint="@color/white"/>
+            android:textColorHint="@color/white"
+            android:id="@+id/login_phone_et" />
 
         <EditText
             android:layout_width="match_parent"
@@ -33,7 +34,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:hint="Password"
-            android:textColorHint="@color/white"/>
+            android:textColorHint="@color/white"
+            android:id="@+id/login_password_et" />
 
         <Button
             android:id="@+id/btn_signin"

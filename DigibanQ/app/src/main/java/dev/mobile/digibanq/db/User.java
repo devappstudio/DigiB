@@ -28,13 +28,12 @@ public class User extends RealmObject {
 
     
     private String dob;
-
-    
     private String smscode;
     private String address;
     private Boolean pendingsync;
     private String lastsync;
     private Double wallet;
+    private String uuid;
 
     // KEEP FIELDS - put your custom fields here
     // KEEP FIELDS END
@@ -58,6 +57,29 @@ public class User extends RealmObject {
         this.pendingsync = pendingsync;
         this.lastsync = lastsync;
         this.wallet = wallet;
+    }
+
+    public User(int id, int serverid, String fullname, String phone, String email, String dob, String smscode, String address, Boolean pendingsync, String lastsync, Double wallet, String uuid) {
+        this.id = id;
+        this.serverid = serverid;
+        this.fullname = fullname;
+        this.phone = phone;
+        this.email = email;
+        this.dob = dob;
+        this.smscode = smscode;
+        this.address = address;
+        this.pendingsync = pendingsync;
+        this.lastsync = lastsync;
+        this.wallet = wallet;
+        this.uuid = uuid;
+    }
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
     }
 
     public int getId() {

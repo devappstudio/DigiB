@@ -13,8 +13,14 @@ import retrofit.http.POST;
 public interface ApiEndpoints {
     @FormUrlEncoded
     @POST("register")
-    Call<UserDetails> regitser(@Field("full_name") String first, @Field("dob") String dob,@Field("phone") String phone, @Field("email") String email, @Field("password") String password,@Field("code") String code);
+    Call<UserDetails> register(@Field("full_name") String first, @Field("dob") String dob,@Field("phone") String phone, @Field("email") String email, @Field("password") String password,@Field("code") String code);
     @FormUrlEncoded
     @POST("login")
     Call<UserDetails> login(@Field("phone") String phone,@Field("password") String password);
+    @POST("forgot_password")
+    Call<UserDetails> forgot_password(@Field("email") String email,@Field("code") String code);
+    //
+    @POST("new_password")
+    Call<UserDetails> new_password(@Field("email") String email,@Field("password") String password);
+
 }

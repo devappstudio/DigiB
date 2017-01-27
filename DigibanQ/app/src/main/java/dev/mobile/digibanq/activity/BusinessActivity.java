@@ -32,7 +32,10 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import dev.mobile.digibanq.api.UserDetails;
+import dev.mobile.digibanq.db.User;
 import info.androidhive.digibanq.R;
+import io.realm.Realm;
 
 /**
  * Created by banktech on 7/13/2016.
@@ -63,15 +66,20 @@ public class BusinessActivity extends AppCompatActivity
     TextView userActivity, userActivityTxt, userActivityMsg,
             suggested_bugdet_txt, userActivityTwo, userActivityMsgTwo,
             header_text_org, userActivityThree, userActivityMsgFour, suggested_bugdet_txt_two;
+    private  static User user;
+    TextView userName,Number,Phone;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_business);
+        Realm realm = Realm.getDefaultInstance();
+        user = realm.where(User.class).findFirst();
+
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         userActivity = (TextView)findViewById(R.id.user_profile_name);
         userActivity.setText(Html.fromHtml("<p><b>Anthony Mens</b></p><p>and</p><p><b>2 contacts</b>"));
@@ -180,6 +188,17 @@ public class BusinessActivity extends AppCompatActivity
 
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+        View header = LayoutInflater.from(this).inflate(R.layout.drawer_header, null);
+        navigationView.addHeaderView(header);
+        userName = (TextView)header.findViewById(R.id.name);
+        Number = (TextView)header.findViewById(R.id.uuid);
+        Phone = (TextView)header.findViewById(R.id.number);
+
+        userName.setText(user.getFullname());
+        Number.setText(user.getUuid());
+        Phone.setText(user.getPhone());
+
         name=(TextView) MenuItemCompat.getActionView(navigationView.getMenu().
                 findItem(R.id.navigation_item_1));
         companyName=(TextView) MenuItemCompat.getActionView(navigationView.getMenu().
