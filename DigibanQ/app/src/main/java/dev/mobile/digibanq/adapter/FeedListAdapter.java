@@ -1,8 +1,6 @@
 package dev.mobile.digibanq.adapter;
 
 
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Context;
 import android.text.Html;
@@ -14,14 +12,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
-
 import dev.mobile.digibanq.activity.FeedImageView;
 import dev.mobile.digibanq.app.AppController;
 import dev.mobile.digibanq.data.FeedItem;
 import info.androidhive.digibanq.R;
+
+import java.util.List;
 
 public class FeedListAdapter extends BaseAdapter {
 	private Activity activity;

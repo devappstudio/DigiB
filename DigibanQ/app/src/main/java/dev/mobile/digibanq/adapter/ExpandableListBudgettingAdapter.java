@@ -6,24 +6,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.EditText;
 import android.widget.TextView;
 import info.androidhive.digibanq.R;
 
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * Created by banktech on 11/24/2016.
- */
-
-public class GoalMiscellanyAdapter extends BaseExpandableListAdapter {
+public class ExpandableListBudgettingAdapter extends BaseExpandableListAdapter {
 
     private Context context;
     private List<String> expandableListTitle;
     private HashMap<String, List<String>> expandableListDetail;
 
-    public GoalMiscellanyAdapter(Context context, List<String> expandableListTitle,
-                                       HashMap<String, List<String>> expandableListDetail) {
+    public ExpandableListBudgettingAdapter(Context context, List<String> expandableListTitle,
+                                           HashMap<String, List<String>> expandableListDetail) {
         this.context = context;
         this.expandableListTitle = expandableListTitle;
         this.expandableListDetail = expandableListDetail;
@@ -50,9 +47,11 @@ public class GoalMiscellanyAdapter extends BaseExpandableListAdapter {
             convertView = layoutInflater.inflate(R.layout.budgeting_list_item, null);
         }
         TextView expandedListTextView = (TextView) convertView
-                .findViewById(R.id.lblListItem);
+                .findViewById(R.id.expandedListItem);
         expandedListTextView.setText(expandedListText);
 
+        EditText expandedEditBox = (EditText) convertView.findViewById(R.id.expandedListEditbox);
+        expandedEditBox.setText(" ");
         return convertView;
     }
 

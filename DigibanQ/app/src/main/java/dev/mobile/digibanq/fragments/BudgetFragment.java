@@ -6,21 +6,17 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
-import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import dev.mobile.digibanq.activity.BudgetDaily;
 import dev.mobile.digibanq.activity.GoalMisceliany;
-import dev.mobile.digibanq.adapter.CustomExpandableListAdapter;
-import dev.mobile.digibanq.data.ExpandableListDataPump;
+import dev.mobile.digibanq.adapter.ExpandableListBudgetFragmentAdapter;
+import dev.mobile.digibanq.data.ExpandableListBudgetData;
 import info.androidhive.digibanq.R;
 
 
@@ -57,9 +53,9 @@ public class BudgetFragment extends Fragment {
 
         btn_continue = (Button)rootView.findViewById(R.id.btn_continue);
         expandableListView = (ExpandableListView) rootView.findViewById(R.id.expandableListView);
-        expandableListDetail = ExpandableListDataPump.getData();
+        expandableListDetail = ExpandableListBudgetData.getData();
         expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
-        expandableListAdapter = new CustomExpandableListAdapter(getActivity(), expandableListTitle, expandableListDetail);
+        expandableListAdapter = new ExpandableListBudgetFragmentAdapter(getActivity(), expandableListTitle, expandableListDetail);
         expandableListView.setAdapter(expandableListAdapter);
         expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
 
@@ -109,6 +105,6 @@ public class BudgetFragment extends Fragment {
         });
         return rootView;
     }
-    }
+}
 
 

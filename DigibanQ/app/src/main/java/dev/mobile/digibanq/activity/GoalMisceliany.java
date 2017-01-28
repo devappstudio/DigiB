@@ -1,8 +1,6 @@
 package dev.mobile.digibanq.activity;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -16,7 +14,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import dev.mobile.digibanq.adapter.CustomExpandableListAdapter;
 import dev.mobile.digibanq.data.ExpandableListDataGoalMiscelliany;
 import info.androidhive.digibanq.R;
 

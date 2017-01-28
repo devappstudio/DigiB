@@ -7,11 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import info.androidhive.digibanq.R;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import info.androidhive.digibanq.R;
 
 /**
  * Created by Suleiman on 14-04-2015.

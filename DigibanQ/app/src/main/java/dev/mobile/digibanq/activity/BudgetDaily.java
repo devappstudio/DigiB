@@ -14,8 +14,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import dev.mobile.digibanq.adapter.CustomExpandableListAdapter;
-import dev.mobile.digibanq.data.ExpandableListDataPump;
+import dev.mobile.digibanq.adapter.ExpandableListBudgettingAdapter;
+import dev.mobile.digibanq.data.ExpandableListBudgetData;
 import info.androidhive.digibanq.R;
 
 /**
@@ -43,9 +43,9 @@ public class BudgetDaily extends AppCompatActivity{
 
         btn_continue = (Button)findViewById(R.id.btn_continue);
         expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
-        expandableListDetail = ExpandableListDataPump.getData();
+        expandableListDetail = ExpandableListBudgetData.getData();
         expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
-        expandableListAdapter = new CustomExpandableListAdapter(this, expandableListTitle, expandableListDetail);
+        expandableListAdapter = new ExpandableListBudgettingAdapter(this, expandableListTitle, expandableListDetail);
         expandableListView.setAdapter(expandableListAdapter);
         expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
 

@@ -7,12 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.ArrayList;
-
-import dev.mobile.digibanq.activity.Recent_Activities;
 import dev.mobile.digibanq.data.Information;
 import info.androidhive.digibanq.R;
+
+import java.util.ArrayList;
 
 /**
  * Created by banktech on 9/25/2016.
