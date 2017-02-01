@@ -32,7 +32,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import dev.mobile.digibanq.db.User;
 import info.androidhive.digibanq.R;
+import io.realm.Realm;
 
 /**
  * Created by banktech on 7/13/2016.
@@ -51,6 +53,7 @@ public class BusinessActivity extends AppCompatActivity
     private ViewPager viewPager;
     private DrawerLayout mDrawerLayout;
     NavigationView mNavigationView;
+    static User userDetails;
 
     private static final String PREFERENCES_FILE = "mymaterialapp_settings";
     private static final String PREF_USER_LEARNED_DRAWER = "navigation_drawer_learned";
@@ -71,6 +74,8 @@ public class BusinessActivity extends AppCompatActivity
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Realm realm = Realm.getDefaultInstance();
+        userDetails = realm.where(User.class).findFirst();
 
         userActivity = (TextView)findViewById(R.id.user_profile_name);
         userActivity.setText(Html.fromHtml("<p><b>Anthony Mens</b></p><p>and</p><p><b>2 contacts</b>"));
@@ -179,6 +184,14 @@ public class BusinessActivity extends AppCompatActivity
 
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View header = LayoutInflater.from(this).inflate(R.layout.drawer_header, null);
+        TextView uid = (TextView)header.findViewById(R.id.userUID);
+        TextView userFullName =(TextView)header.findViewById(R.id.name);
+        TextView userNumber = (TextView)header.findViewById(R.id.number);
+        uid.setText(userDetails.getUuid());
+        userFullName.setText(userDetails.getFullname());
+        userNumber.setText(userDetails.getPhone());
+        navigationView.addHeaderView(header);
         name=(TextView) MenuItemCompat.getActionView(navigationView.getMenu().
                 findItem(R.id.navigation_item_1));
         companyName=(TextView) MenuItemCompat.getActionView(navigationView.getMenu().

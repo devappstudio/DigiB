@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import dev.mobile.digibanq.db.ActivationCode;
+import dev.mobile.digibanq.db.ConfirmationCode;
 import dev.mobile.digibanq.db.User;
 import info.androidhive.digibanq.R;
 import io.realm.Realm;
@@ -150,6 +151,7 @@ public class ConfirmCode extends AppCompatActivity {
             reg.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             reg.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             ConfirmCode.this.startActivity(reg);
+            finish();
 
         }
         else

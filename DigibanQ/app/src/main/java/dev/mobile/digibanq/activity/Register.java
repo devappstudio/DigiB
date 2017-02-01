@@ -123,7 +123,7 @@ public class Register extends AppCompatActivity{
                             User user = new User();
                             user.setId(1);
                             user.setServerid(Integer.parseInt(userDetails.getId()));
-                            user.setUuid(userDetails.getUuid());
+                            user.setUuid(userDetails.getUnique_id());
                             user.setEmail(user.getEmail());
                             user.setDob(user.getDob());
                             user.setSmscode("0");

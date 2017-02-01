@@ -7,9 +7,13 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import dev.mobile.digibanq.db.ConfirmationCode;
 import info.androidhive.digibanq.R;
+import io.realm.Realm;
 
 /**
  * Created by banktech on 11/24/2016.
@@ -19,6 +23,8 @@ public class Enter_reset_code extends AppCompatActivity {
 
     Button reset;
     TextView back;
+    EditText code;
+    String Code;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,14 +38,25 @@ public class Enter_reset_code extends AppCompatActivity {
 
         reset = (Button)findViewById(R.id.reset_code);
         back = (TextView)findViewById(R.id.back);
+        code = (EditText)findViewById(R.id.recover_email);
+
 
 
         reset.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 // Perform action on click
-                Intent reg = new Intent(Enter_reset_code.this, Reset_password.class);
-                Enter_reset_code.this.startActivity(reg);
-
+                Realm realm = Realm.getDefaultInstance();
+                ConfirmationCode confirmationCode = realm.where(ConfirmationCode.class).findFirst();
+                if(code.getText().toString().equals(confirmationCode.getCode()))
+                {
+                    Intent reg = new Intent(Enter_reset_code.this, Reset_password.class);
+                    Enter_reset_code.this.startActivity(reg);
+                    finish();
+                }
+                else
+                {
+                    Toast.makeText(Enter_reset_code.this,"Sorry Wrong Activation Code",Toast.LENGTH_LONG).show();
+                }
 
             }
         });

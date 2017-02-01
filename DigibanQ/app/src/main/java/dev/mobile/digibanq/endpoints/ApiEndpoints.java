@@ -17,4 +17,13 @@ public interface ApiEndpoints {
     @FormUrlEncoded
     @POST("login")
     Call<UserDetails> login(@Field("phone") String phone,@Field("password") String password);
+    //
+    @FormUrlEncoded
+    @POST("forgot_password")
+    Call<UserDetails> forgotPassword(@Field("email") String email,@Field("code") String codes);
+    @FormUrlEncoded
+    @POST("new_password")
+    Call<UserDetails> newPassword(@Field("email") String email,@Field("password") String password);
+
+
 }

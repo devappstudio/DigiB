@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                             user.setSmscode("0");
                             user.setFullname(userDetails.getFull_name());
                             user.setPhone(Phone);
-                            user.setUuid(userDetails.getUuid());
+                            user.setUuid(userDetails.getUnique_id());
                             user.setDob(userDetails.getDob());
                             user.setServerid(Integer.parseInt(userDetails.getId()));
                             user.setEmail(userDetails.getEmail());
