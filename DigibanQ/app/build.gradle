@@ -36,10 +36,10 @@ dependencies {
     compile 'org.greenrobot:greendao:3.2.0'
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'org.greenrobot:essentials:3.0.0-RC1'
-
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.squareup.okhttp3:okhttp:3.4.2'
+    compile 'net.rimoto:intlphoneinput:0.9.4'
     compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
 }
 apply plugin: 'org.greenrobot.greendao'

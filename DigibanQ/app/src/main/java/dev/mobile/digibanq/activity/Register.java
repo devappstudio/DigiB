@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import net.rimoto.intlphoneinput.IntlPhoneInput;
+
 import java.util.List;
 import java.util.Random;
 
@@ -36,9 +38,9 @@ public class Register extends AppCompatActivity{
 
     Button back,cont;
     static String code;
-    EditText fullname,password,email,phone;
+    EditText fullname,password,email;
     String fullName,Password,Email,Phone;
-
+    IntlPhoneInput phone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +57,7 @@ public class Register extends AppCompatActivity{
         fullname = (EditText)findViewById(R.id.etFullName);
         password = (EditText)findViewById(R.id.etPassword);
         email = (EditText)findViewById(R.id.etEmail);
-        phone = (EditText)findViewById(R.id.etPhoneNumber);
+        phone = (IntlPhoneInput)findViewById(R.id.etPhoneNumber);
 
         back = (Button)findViewById(R.id.btn_back);
         cont = (Button)findViewById(R.id.btn_cont);
@@ -93,60 +95,79 @@ public class Register extends AppCompatActivity{
     {
         fullName = fullname.getText().toString();
         Password = password.getText().toString();
-        Phone = phone.getText().toString();
+        Phone = phone.getNumber();
         Email = email.getText().toString();
-        if(!fullName.equalsIgnoreCase("") &&!Password.equalsIgnoreCase("") &&!Phone.equalsIgnoreCase("") &&!Email.equalsIgnoreCase(""))
+        if(phone.isValid())
         {
-            Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl(ApiLocation.getApi())
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .build();
+            if(!fullName.equalsIgnoreCase("") &&!Password.equalsIgnoreCase("") &&!Phone.equalsIgnoreCase("") &&!Email.equalsIgnoreCase(""))
+            {
+                Retrofit retrofit = new Retrofit.Builder()
+                        .baseUrl(ApiLocation.getApi())
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .build();
 
-            ApiEndpoints endpoints = retrofit.create(ApiEndpoints.class);
+                ApiEndpoints endpoints = retrofit.create(ApiEndpoints.class);
 
-            Call<UserDetails> insert = endpoints.regitser(fullName,"",Phone,Email,Password,code);
-            insert.enqueue(new Callback<UserDetails>() {
-               final ProgressDialog pd  = ProgressDialog.show(Register.this,"Please wait ..."," Please Wait Sending Your Code  ...", true);
+                Call<UserDetails> insert = endpoints.regitser(fullName,"",Phone,Email,Password,code);
+                insert.enqueue(new Callback<UserDetails>() {
+                    final ProgressDialog pd  = ProgressDialog.show(Register.this,"Please wait ..."," Please Wait Sending Your Code  ...", true);
 
-                @Override
-                public void onResponse(Response<UserDetails> response, Retrofit retrofit) {
-                    pd.hide();
-                    Realm realm = Realm.getDefaultInstance();
-                    realm.beginTransaction();
-                    User user = new User();
-                    user.setId(1);
-                    user.setSmscode("0");
-                    user.setFullname(fullName);
-                    user.setPhone(Phone);
-                    user.setEmail(Email);
-                    ActivationCode activationCode = new ActivationCode(code);
-                    realm.copyToRealmOrUpdate(user);
-                    realm.copyToRealmOrUpdate(activationCode);
-                    realm.commitTransaction();
+                    @Override
+                    public void onResponse(Response<UserDetails> response, Retrofit retrofit) {
+                        pd.hide();
+                        UserDetails userDetails = response.body();
+                        if(userDetails.getError().equalsIgnoreCase("N/A"))
+                        {
+                            Realm realm = Realm.getDefaultInstance();
+                            realm.beginTransaction();
+                            User user = new User();
+                            user.setId(1);
+                            user.setServerid(Integer.parseInt(userDetails.getId()));
+                            user.setUuid(userDetails.getUuid());
+                            user.setEmail(user.getEmail());
+                            user.setDob(user.getDob());
+                            user.setSmscode("0");
+                            user.setFullname(fullName);
+                            user.setPhone(Phone);
+                            user.setEmail(Email);
+                            ActivationCode activationCode = new ActivationCode(code);
+                            realm.copyToRealmOrUpdate(user);
+                            realm.copyToRealmOrUpdate(activationCode);
+                            realm.commitTransaction();
+                            Intent reg = new Intent(Register.this, ConfirmCode.class);
+                            reg.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            reg.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            reg.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                            Register.this.startActivity(reg);
+                            finish();
 
-                    Intent reg = new Intent(Register.this, ConfirmCode.class);
-                    reg.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    reg.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    reg.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                    Register.this.startActivity(reg);
-                    finish();
-                }
+                        }
+                        else
+                        {
+                            Toast.makeText(getApplicationContext(),userDetails.getError(),Toast.LENGTH_LONG).show();
+                        }
+                    }
 
-                @Override
-                public void onFailure(Throwable t) {
-                    t.printStackTrace();
-                    pd.hide();
+                    @Override
+                    public void onFailure(Throwable t) {
+                        t.printStackTrace();
+                        pd.hide();
 
-                }
-            });
+                    }
+                });
 
+
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(),"Sorry All Fields Are Required",Toast.LENGTH_LONG).show();
+            }
 
         }
         else
         {
-            Toast.makeText(getApplicationContext(),"Sorry All Fields Are Required",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Please Enter A Correct Phone Number",Toast.LENGTH_LONG).show();
+
         }
-
-
     }
 }

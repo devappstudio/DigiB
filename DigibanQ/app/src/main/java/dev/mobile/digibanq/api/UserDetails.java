@@ -6,12 +6,12 @@ package dev.mobile.digibanq.api;
 
 public class UserDetails {
 
-    String full_name, dob,phone,email,residential_address,uuid,id;
+    String full_name, dob,phone,email,residential_address,uuid,id,error;
 
     public UserDetails() {
     }
 
-    public UserDetails(String full_name, String dob, String phone, String email, String residential_address, String uuid, String id) {
+    public UserDetails(String full_name, String dob, String phone, String email, String residential_address, String uuid, String id, String error) {
         this.full_name = full_name;
         this.dob = dob;
         this.phone = phone;
@@ -19,6 +19,15 @@ public class UserDetails {
         this.residential_address = residential_address;
         this.uuid = uuid;
         this.id = id;
+        this.error = error;
+    }
+
+    public String getError() {
+        return error;
+    }
+
+    public void setError(String error) {
+        this.error = error;
     }
 
     public String getFull_name() {

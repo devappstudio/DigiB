@@ -48,7 +48,7 @@ public class ExpandableListBudgetFragmentAdapter extends BaseExpandableListAdapt
         if (convertView == null) {
             LayoutInflater layoutInflater = (LayoutInflater) this.context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = layoutInflater.inflate(R.layout.budget_fragment_list_item, null);
+            convertView = layoutInflater.inflate(R.layout.budget_list_item_fragment, null);
         }
         TextView expandedListTextView = (TextView) convertView
                 .findViewById(R.id.expandedListItem);
@@ -87,7 +87,7 @@ public class ExpandableListBudgetFragmentAdapter extends BaseExpandableListAdapt
         if (convertView == null) {
             LayoutInflater layoutInflater = (LayoutInflater) this.context.
                     getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = layoutInflater.inflate(R.layout.budget_fragment_list_group, null);
+            convertView = layoutInflater.inflate(R.layout.budget_list_group_fragment, null);
         }
         TextView listTitleTextView = (TextView) convertView
                 .findViewById(R.id.listTitle);

@@ -87,9 +87,9 @@ android:background="#F1F5F8">
             android:layout_marginBottom="20dp"
             android:textSize="12dp" />
 
-            <EditText
+            <net.rimoto.intlphoneinput.IntlPhoneInput
                 android:layout_width="match_parent"
-                android:layout_height="40dip"
+                android:layout_height="wrap_content"
                 android:background="@color/windowBackground"
                 android:layout_margin="10dp"
                 android:inputType="phone"
@@ -99,7 +99,7 @@ android:background="#F1F5F8">
                 android:textColor="#757584"
                 android:digits="0123456789+"
                 android:id="@+id/etPhoneNumber"
-                android:textSize="12dp" />
+                android:textSize="10dp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

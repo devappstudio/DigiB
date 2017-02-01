@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import dev.mobile.digibanq.adapter.GoalMiscellanyAdapter;
 import dev.mobile.digibanq.data.ExpandableListDataGoalMiscelliany;
 import info.androidhive.digibanq.R;
 
@@ -42,7 +43,7 @@ public class GoalMisceliany extends AppCompatActivity{
         expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
         expandableListDetail = ExpandableListDataGoalMiscelliany.getData();
         expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
-        expandableListAdapter = new CustomExpandableListAdapter(this, expandableListTitle, expandableListDetail);
+        expandableListAdapter = new GoalMiscellanyAdapter(this, expandableListTitle, expandableListDetail);
         expandableListView.setAdapter(expandableListAdapter);
         expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
 

@@ -47,7 +47,7 @@ public class GoalMiscellanyAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             LayoutInflater layoutInflater = (LayoutInflater) this.context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = layoutInflater.inflate(R.layout.budgeting_list_item, null);
+            convertView = layoutInflater.inflate(R.layout.budgetting_list_item, null);
         }
         TextView expandedListTextView = (TextView) convertView
                 .findViewById(R.id.lblListItem);
@@ -84,7 +84,7 @@ public class GoalMiscellanyAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             LayoutInflater layoutInflater = (LayoutInflater) this.context.
                     getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = layoutInflater.inflate(R.layout.budget_fragment_list_group, null);
+            convertView = layoutInflater.inflate(R.layout.budget_list_group_fragment, null);
         }
         TextView listTitleTextView = (TextView) convertView
                 .findViewById(R.id.listTitle);

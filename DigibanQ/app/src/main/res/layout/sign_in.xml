@@ -17,13 +17,14 @@
             android:layout_marginTop="50dp"
             android:src="@drawable/logo"/>
 
-        <EditText
+        <net.rimoto.intlphoneinput.IntlPhoneInput
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:hint="Phone Number"
+            android:id="@+id/loginPhoneEt"
             android:textColorHint="@color/white"/>
 
         <EditText
@@ -32,7 +33,9 @@
             android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
+            android:inputType="textPassword"
             android:hint="Password"
+            android:id="@+id/loginPasswordEt"
             android:textColorHint="@color/white"/>
 
         <Button
