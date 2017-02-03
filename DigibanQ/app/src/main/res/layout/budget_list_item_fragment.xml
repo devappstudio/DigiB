@@ -58,15 +58,17 @@
                 android:progress="20"/>
 
         <EditText
-                android:id="@+id/expandedListEditbox"
+                android:id="@+id/expandedListEdit_box"
                 android:layout_width="120dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
                 android:padding="5dp"
+                android:textSize="12sp"
+                android:inputType="numberDecimal"
                 android:hint="@string/ghs"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:background="#DBDBEA"/>
 
     </LinearLayout>

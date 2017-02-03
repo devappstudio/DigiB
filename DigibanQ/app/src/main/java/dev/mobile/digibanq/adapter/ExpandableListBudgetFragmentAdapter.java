@@ -54,7 +54,7 @@ public class ExpandableListBudgetFragmentAdapter extends BaseExpandableListAdapt
                 .findViewById(R.id.expandedListItem);
         expandedListTextView.setText(expandedListText);
 
-        EditText expandedEditBox = (EditText) convertView.findViewById(R.id.expandedListEditbox);
+        EditText expandedEditBox = (EditText) convertView.findViewById(R.id.expandedListEdit_box);
         expandedEditBox.setText(" ");
         return convertView;
     }

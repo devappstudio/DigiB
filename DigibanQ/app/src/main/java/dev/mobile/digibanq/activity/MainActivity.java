@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         phone = (IntlPhoneInput)findViewById(R.id.loginPhoneEt);
 
 
+
         login.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 // Perform action on click

@@ -274,7 +274,7 @@ public class BusinessActivity extends AppCompatActivity
         // this is set the view from XML inside AlertDialog
         alert.setView(alertLayout);
         // disallow cancel of AlertDialog on click of back button and outside touch
-        alert.setCancelable(false);
+        alert.setCancelable(true);
         alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 
             @Override
