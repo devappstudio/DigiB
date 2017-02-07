@@ -77,14 +77,14 @@ public class BusinessActivity extends AppCompatActivity
         Realm realm = Realm.getDefaultInstance();
         userDetails = realm.where(User.class).findFirst();
 
-        userActivity = (TextView)findViewById(R.id.user_profile_name);
-        userActivity.setText(Html.fromHtml("<p><b>Anthony Mens</b></p><p>and</p><p><b>2 contacts</b>"));
+        //userActivity = (TextView)findViewById(R.id.user_profile_name);
+       //userActivity.setText(Html.fromHtml("<p><b>Anthony Mens</b></p><p>and</p><p><b>2 contacts</b>"));
 
-        userActivityTxt = (TextView)findViewById(R.id.userActivityText);
-        userActivityTxt.setText(Html.fromHtml("<p>shared a promo from <b>Nasco Ghana's</b> \nstory board.</p>"));
+        //userActivityTxt = (TextView)findViewById(R.id.userActivityText);
+        //userActivityTxt.setText(Html.fromHtml("<p>shared a promo from <b>Nasco Ghana's</b> \nstory board.</p>"));
 
-        userActivityMsg = (TextView)findViewById(R.id.userActivityMsg);
-        userActivityMsg.setText(Html.fromHtml("<p><b>Thanks to Nasco i taught i should share this \nwonderful moment with you.</b></p>"));
+        //userActivityMsg = (TextView)findViewById(R.id.userActivityMsg);
+        //userActivityMsg.setText(Html.fromHtml("<p><b>Thanks to Nasco i taught i should share this \nwonderful moment with you.</b></p>"));
 
         suggested_bugdet_txt = (TextView)findViewById(R.id.suggested_bugdet_txt);
         suggested_bugdet_txt.setText(Html.fromHtml("<p>Spend to save <b>GHS 100</b> towards your goal</p><b>GHS 1,200 before NOV 30</b>"));

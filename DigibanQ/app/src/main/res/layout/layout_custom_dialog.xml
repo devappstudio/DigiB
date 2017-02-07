@@ -38,7 +38,7 @@
             android:id="@+id/gift_code"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_menu_goals"
+            android:drawableLeft="@drawable/ic_action_gift"
             android:drawablePadding="20dp"
             android:paddingLeft="10dp"
             android:background="@color/white"

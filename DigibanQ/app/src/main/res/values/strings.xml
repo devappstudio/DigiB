@@ -71,6 +71,7 @@
     <string name="item_name_placeholder">item name</string>
     <string name="ghs">GHS</string>
     <string name="edit">edit</string>
+    <string name="_95_premium_members">95% Premium members</string>
 
     <string-array name="dept_array">
         <item>Apparel</item>

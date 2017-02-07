@@ -5,7 +5,7 @@
     android:id="@+id/nav_drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#ffffff"
     android:fitsSystemWindows="true">
 
 
@@ -40,127 +40,137 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
+                    android:id="@+id/commentLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rel_stories"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="14dp"
-                        android:inputType="text"
-                        android:text="Related Stories"
-                        android:textStyle="bold"
-                        android:textColor="@color/timestamp"/>
-                    <ImageButton
-                        android:id="@+id/arrow"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="210dp"
-                        android:background="@drawable/ic_action_down"/>
+                    android:orientation="vertical"
+                    android:background="#eefaf6">
 
-                </LinearLayout>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:inputType="textMultiLine"
+                        android:textColorHint="@color/timestamp"
+                        android:textSize="14sp"
+                        android:paddingLeft="10dp"
+                        android:hint="Share your taughts, take an action now"
+                        android:background="@drawable/comement_box_bg"/>
                 <LinearLayout
-                    android:id="@+id/profile_photoLayout"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/rel_stories"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginLeft="20dp"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:id="@+id/profile_photo"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/aka"/>
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center"
-                        android:background="@color/green"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/user_act_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="70dp"
-                    android:layout_marginTop="62dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center_horizontal"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/user_profile_name"
+
+                    <ProgressBar
+                        android:id="@+id/progressBar4"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="20"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="15dp"
                         android:textSize="14sp"
                         android:inputType="text"
-                        android:text=""
+                        android:text="@string/_95_premium_members"
                         android:textColor="#484848"/>
-                    <TextView
+                    <Button
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="45dp"
-                        android:textSize="12dp"
-                        android:inputType="text"
-                        android:text="2hrs"
-                        android:textStyle="bold"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="Share"
+                        android:textSize="12sp"
+                        android:background="@drawable/comment_btn_bg"
                         android:textColor="@color/timestamp"/>
-                    <ImageButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:layout_marginLeft="2dp"
-                        android:background="@drawable/dots_vertical"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/rel_stories"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="82dp"
-                    android:layout_marginTop="66dp"
-                    android:layout_alignTop="@+id/rel_stories"
-                    android:orientation="vertical">
-                         <TextView
-                             android:id="@+id/userActivityText"
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"
-                             android:textSize="14sp"
-                             android:inputType="textMultiLine"
-                             android:text=""
-                             android:minLines="3"
-                             android:textColor="#484848"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="82dp"
-                    android:layout_marginTop="88dp"
-                    android:layout_alignTop="@+id/rel_stories"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/userActivityMsg"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/commentLayout"
+                    android:orientation="horizontal"
+                    android:background="#88a1af">
+                    <HorizontalScrollView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:inputType="textMultiLine"
-                        android:text=""
-                        android:minLines="3"
-                        android:textColor="#484848"/>
+                        android:scrollbars="none">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="POST"
+                        android:textSize="12sp"
+                        android:background="#88a1af"
+                        android:textColor="@color/white"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ASK"
+                        android:textSize="12sp"
+                        android:background="#88a1af"
+                        android:textColor="@color/white"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SELL"
+                        android:textSize="12sp"
+                        android:background="#88a1af"
+                        android:textColor="@color/white"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GOAL"
+                        android:textSize="12sp"
+                        android:background="#88a1af"
+                        android:textColor="@color/white"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BUDGET"
+                        android:textSize="12sp"
+                        android:background="#88a1af"
+                        android:textColor="@color/white"/>
+                        </LinearLayout>
+                    </HorizontalScrollView>
                 </LinearLayout>
                 <View
-                    android:id="@+id/div"
+                    android:id="@+id/seperator"
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="140dp"
-                    android:background="@color/feed_bg"/>
+                    android:layout_height="10dp"
+                    android:background="#c8e1ed"
+                    android:layout_below="@+id/rel_stories"/>
 
                      <LinearLayout
                          android:id="@+id/suggestions"
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
-                         android:layout_alignTop="@+id/div"
-                         android:layout_marginTop="15dp"
+                         android:layout_below="@+id/seperator"
+                         android:layout_marginTop="5dp"
                          android:orientation="horizontal"
                          android:layout_gravity="center_horizontal"
                          android:paddingLeft="10dp"
@@ -181,12 +191,18 @@
                              android:text=""
                              android:textColor="#484848"/>
                      </LinearLayout>
+                <View
+                    android:id="@+id/div"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/timestamp"
+                    android:layout_below="@+id/suggestions"/>
                   <LinearLayout
                       android:id="@+id/profile_prod"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
-                      android:layout_marginTop="30dp"
-                      android:layout_alignTop="@+id/suggestions"
+                      android:layout_marginTop="10dp"
+                      android:layout_below="@+id/div"
                       android:orientation="vertical">
                       <ImageView
                           android:id="@+id/prod_photo"
@@ -249,8 +265,8 @@
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:layout_toRightOf="@+id/profile_prod"
-                      android:layout_alignTop="@+id/suggestions"
-                      android:layout_marginTop="20dp"
+                      android:layout_marginTop="5dp"
+                      android:layout_below="@+id/div"
                       android:orientation="vertical">
                       <LinearLayout
                           android:layout_width="wrap_content"
@@ -2101,7 +2117,7 @@
 
 
     </RelativeLayout>
-    <FrameLayout
+    <!--<FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
@@ -2304,7 +2320,7 @@
 
         </com.github.clans.fab.FloatingActionMenu>
 
-    </FrameLayout>
+    </FrameLayout>-->
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
