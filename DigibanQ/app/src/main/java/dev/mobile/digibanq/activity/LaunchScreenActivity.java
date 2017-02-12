@@ -51,8 +51,8 @@ public class LaunchScreenActivity extends AppCompatActivity {
             intent = new Intent(LaunchScreenActivity.this, MainActivity.class);
             else
             {
-                ConfirmationCode confirmationCode = realm.where(ConfirmationCode.class).findFirst();
-                if(confirmationCode.equals(null) || confirmationCode.getCode().equalsIgnoreCase(""))
+                RealmResults<ConfirmationCode> confirmationCode  = realm.where(ConfirmationCode.class).findAll();
+                if(confirmationCode.isEmpty())
                 {
                     intent = new Intent(LaunchScreenActivity.this, ConfirmCode.class);
                 }
@@ -83,7 +83,6 @@ public class LaunchScreenActivity extends AppCompatActivity {
         protected void onPostExecute(Object o) {
             super.onPostExecute(o);
 //            Pass your loaded data here using Intent
-
 //            intent.putExtra("data_key", "");
             startActivity(intent);
             finish();
