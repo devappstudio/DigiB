@@ -144,6 +144,7 @@ public class ConfirmCode extends AppCompatActivity {
             realm.beginTransaction();
             User user = realm.where(User.class).findFirst();
             user.setSmscode("1");
+            realm.where(ActivationCode.class).findFirst().deleteFromRealm();
             realm.copyToRealmOrUpdate(user);
             realm.commitTransaction();
             Intent reg = new Intent(ConfirmCode.this, BusinessActivity.class);

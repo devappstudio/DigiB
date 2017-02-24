@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import dev.mobile.digibanq.db.ActivationCode;
 import dev.mobile.digibanq.db.ConfirmationCode;
 import dev.mobile.digibanq.db.User;
 import info.androidhive.digibanq.R;
@@ -47,19 +48,27 @@ public class LaunchScreenActivity extends AppCompatActivity {
             super.onPreExecute();
             RealmResults<User> user = realm.where(User.class).findAll();
             intent = new Intent(LaunchScreenActivity.this, BusinessActivity.class);
+            ConfirmationCode confirmationCode = realm.where(ConfirmationCode.class).findFirst();
+            ActivationCode activationCode = realm.where(ActivationCode.class).findFirst();
+
+
             if(user.isEmpty())
-            intent = new Intent(LaunchScreenActivity.this, MainActivity.class);
+            {
+                intent = new Intent(LaunchScreenActivity.this, MainActivity.class);
+            }
+            else
+            if(confirmationCode != null)
+            {
+                intent = new Intent(LaunchScreenActivity.this, Enter_reset_code.class);
+            }
+            else
+            if( activationCode != null)
+            {
+                intent = new Intent(LaunchScreenActivity.this, ConfirmCode.class);
+            }
             else
             {
-                RealmResults<ConfirmationCode> confirmationCode  = realm.where(ConfirmationCode.class).findAll();
-                if(confirmationCode.isEmpty())
-                {
-                    intent = new Intent(LaunchScreenActivity.this, ConfirmCode.class);
-                }
-                else
-                {
-                    intent = new Intent(LaunchScreenActivity.this, BusinessActivity.class);
-                }
+                intent = new Intent(LaunchScreenActivity.this, BusinessActivity.class);
             }
 
         }
