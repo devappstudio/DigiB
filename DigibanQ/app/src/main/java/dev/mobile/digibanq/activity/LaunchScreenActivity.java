@@ -8,8 +8,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import dev.mobile.digibanq.db.ActivationCode;
-import dev.mobile.digibanq.db.ConfirmationCode;
 import dev.mobile.digibanq.db.User;
 import info.androidhive.digibanq.R;
 import io.realm.Realm;
@@ -48,27 +46,19 @@ public class LaunchScreenActivity extends AppCompatActivity {
             super.onPreExecute();
             RealmResults<User> user = realm.where(User.class).findAll();
             intent = new Intent(LaunchScreenActivity.this, BusinessActivity.class);
-            ConfirmationCode confirmationCode = realm.where(ConfirmationCode.class).findFirst();
-            ActivationCode activationCode = realm.where(ActivationCode.class).findFirst();
-
-
             if(user.isEmpty())
-            {
-                intent = new Intent(LaunchScreenActivity.this, MainActivity.class);
-            }
-            else
-            if(confirmationCode != null)
-            {
-                intent = new Intent(LaunchScreenActivity.this, Enter_reset_code.class);
-            }
-            else
-            if( activationCode != null)
-            {
-                intent = new Intent(LaunchScreenActivity.this, ConfirmCode.class);
-            }
+            intent = new Intent(LaunchScreenActivity.this, WelcomeActivity.class);
             else
             {
-                intent = new Intent(LaunchScreenActivity.this, BusinessActivity.class);
+                User user1 = realm.where(User.class).findFirst();
+                if(user1.getSmscode().equalsIgnoreCase("0"))
+                {
+                    intent = new Intent(LaunchScreenActivity.this, ConfirmCode.class);
+                }
+                else
+                {
+                    intent = new Intent(LaunchScreenActivity.this, BusinessActivity.class);
+                }
             }
 
         }
@@ -92,6 +82,7 @@ public class LaunchScreenActivity extends AppCompatActivity {
         protected void onPostExecute(Object o) {
             super.onPostExecute(o);
 //            Pass your loaded data here using Intent
+
 //            intent.putExtra("data_key", "");
             startActivity(intent);
             finish();

@@ -117,39 +117,33 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Response<UserDetails> response, Retrofit retrofit) {
                         pd.hide();
-                        if(response.isSuccess())
+                        UserDetails  userDetails = response.body();
+                        if(userDetails.getError().equalsIgnoreCase("N/A"))
                         {
-                            UserDetails  userDetails = response.body();
-                            if(userDetails.getError().equalsIgnoreCase("N/A"))
-                            {
-                                Realm realm = Realm.getDefaultInstance();
-                                realm.beginTransaction();
-                                User user = new User();
-                                user.setId(1);
-                                user.setSmscode("0");
-                                user.setFullname(userDetails.getFull_name());
-                                user.setPhone(Phone);
-                                user.setUuid(userDetails.getUnique_id());
-                                user.setDob(userDetails.getDob());
-                                user.setServerid(Integer.parseInt(userDetails.getId()));
-                                user.setEmail(userDetails.getEmail());
-                                realm.copyToRealmOrUpdate(user);
-                                realm.commitTransaction();
-                                Intent reg = new Intent(MainActivity.this, BusinessActivity.class);
-                                reg.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                reg.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                reg.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                                MainActivity.this.startActivity(reg);
-                                finish();
-                            }
-                            else
-                            {
-                                Toast.makeText(getApplicationContext(),userDetails.getError(),Toast.LENGTH_LONG).show();
-                            }
+                            Realm realm = Realm.getDefaultInstance();
+                            realm.beginTransaction();
+                            User user = new User();
+                            user.setId(1);
+                            user.setSmscode("0");
+                            user.setFullname(userDetails.getFull_name());
+                            user.setPhone(Phone);
+                            user.setUuid(userDetails.getUnique_id());
+                            user.setDob(userDetails.getDob());
+                            user.setServerid(Integer.parseInt(userDetails.getId()));
+                            user.setEmail(userDetails.getEmail());
+                            realm.copyToRealmOrUpdate(user);
+                            realm.commitTransaction();
+                            Intent reg = new Intent(MainActivity.this, BusinessActivity.class);
+                            reg.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            reg.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            reg.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                            MainActivity.this.startActivity(reg);
+                            finish();
                         }
                         else
                         {
-                            Toast.makeText(getApplicationContext(),response.message(),Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),userDetails.getError(),Toast.LENGTH_LONG).show();
+
                         }
                     }
 

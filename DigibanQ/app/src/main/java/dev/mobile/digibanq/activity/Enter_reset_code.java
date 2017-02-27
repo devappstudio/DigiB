@@ -50,7 +50,6 @@ public class Enter_reset_code extends AppCompatActivity {
                 if(code.getText().toString().equals(confirmationCode.getCode()))
                 {
                     Intent reg = new Intent(Enter_reset_code.this, Reset_password.class);
-                    confirmationCode.deleteFromRealm();
                     Enter_reset_code.this.startActivity(reg);
                     finish();
                 }
