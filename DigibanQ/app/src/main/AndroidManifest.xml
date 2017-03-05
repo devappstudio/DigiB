@@ -80,10 +80,6 @@
             android:label="Finance"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name="dev.mobile.digibanq.activity.About"
-            android:label="Recent Activity"
-            android:screenOrientation="portrait"></activity>
-        <activity
             android:name="dev.mobile.digibanq.activity.WishList"
             android:label="Wishlist"
             android:screenOrientation="portrait"></activity>
@@ -138,6 +134,11 @@
         <activity
             android:name="dev.mobile.digibanq.activity.Enter_reset_code"
             android:label="Recover Password"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="dev.mobile.digibanq.activity.Wallet_payment"
+            android:label="Wallet Payment"
             android:screenOrientation="portrait">
         </activity>
     </application>

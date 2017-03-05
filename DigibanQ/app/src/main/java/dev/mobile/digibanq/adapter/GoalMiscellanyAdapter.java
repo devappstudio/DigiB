@@ -50,7 +50,7 @@ public class GoalMiscellanyAdapter extends BaseExpandableListAdapter {
             convertView = layoutInflater.inflate(R.layout.budgetting_list_item, null);
         }
         TextView expandedListTextView = (TextView) convertView
-                .findViewById(R.id.lblListItem);
+                .findViewById(R.id.expandedListItem);
         expandedListTextView.setText(expandedListText);
 
         return convertView;

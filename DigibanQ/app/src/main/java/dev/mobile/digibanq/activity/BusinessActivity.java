@@ -262,7 +262,7 @@ public class BusinessActivity extends AppCompatActivity
         pay_from_wallet.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 // Perform action on click
-                Intent pay = new Intent(BusinessActivity.this, FinancialActivity.class);
+                Intent pay = new Intent(BusinessActivity.this, Wallet_payment.class);
                 BusinessActivity.this.startActivity(pay);
 
             }
